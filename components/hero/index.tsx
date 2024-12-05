@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { Code2, ExternalLink, Github, Linkedin } from "lucide-react";
 import Link from "next/link";
-import styles from "./index.module.css";
 
 const codeSnippet = `
 function Developer() {
@@ -44,60 +43,157 @@ const codeVariants = {
   },
 };
 
-export function Hero() {
+export function HeroContent() {
   return (
-    <section className={styles.hero}>
-      {/* Animated Background Elements */}
-      <div className={styles.animated_container}>
-        <div className={styles.animated_element1} />
-        <div className={styles.animated_element2} />
-      </div>
-      {/* Grid Pattern Overlay */}
-      <div className={styles.grid_pattern} />
-
-      <div className={styles.grid_container}>
+    <section className="relative flex   items-center min-h-screen">
+      <div
+        className="container
+  mx-auto
+  px-4
+  z-10;"
+      >
         <motion.div
-          className={styles.grid_motion}
+          className="grid
+  grid-cols-1
+  lg:grid-cols-2
+  gap-12
+  items-center;"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
           {/* Left Column - Main Content */}
-          <div className={styles.hero_content}>
+          <div className="space-y-2">
             <motion.div variants={itemVariants}>
-              <span className={styles.hero_intro}>Hello, I'm</span>
-              <h1 className={styles.hero_name}>Patrick Annang</h1>
-              <h2 className={styles.hero_title}>Front-End Developer</h2>
+              <span
+                className="text-purple-400
+  font-mono"
+              >
+                Hello, I&apos;m
+              </span>
+              <h1
+                className="text-5xl
+  md:text-7xl
+  font-bold
+  text-white
+  mt-2"
+              >
+                Patrick Annang
+              </h1>
+              <h2
+                className="text-2xl
+  md:text-3xl
+  text-purple-200
+  mt-2"
+              >
+                Front-End Developer
+              </h2>
             </motion.div>
-            <motion.p variants={itemVariants} className={styles.hero_about}>
+            <motion.p
+              variants={itemVariants}
+              className=" text-gray-300
+  text-lg
+  max-w-xl"
+            >
               I craft responsive websites where technology meets creativity.
               Building beautiful web experiences with modern technologies.
             </motion.p>
-            <motion.div variants={itemVariants} className={styles.hero_button}>
-              <button className={styles.hero_button_a} type="button">
+            <motion.div
+              variants={itemVariants}
+              className="flex
+  gap-4"
+            >
+              <button
+                className="px-6
+  py-3
+  bg-purple-600
+  text-white
+  rounded-lg
+  hover:bg-purple-700
+  transition-colors
+  flex
+  items-center
+  gap-2"
+                type="button"
+              >
                 <Code2 size={20} />
                 View Projects
               </button>
-              <button className={styles.hero_button_b} type="button">
+              <button
+                className="px-6
+  py-3
+  border
+  border-purple-400
+  text-purple-400
+  rounded-lg
+  hover:bg-purple-400/10
+  transition-colors
+  flex
+  items-center
+  gap-2"
+                type="button"
+              >
                 <ExternalLink size={20} />
                 Contact Me
               </button>
             </motion.div>
-            <motion.div variants={itemVariants} className={styles.hero_social}>
-              <Link href="#" className={styles.hero_social_icon}>
+            <motion.div
+              variants={itemVariants}
+              className="flex
+  gap-4
+  text-gray-400"
+            >
+              <Link
+                href="#"
+                className="hover:text-purple-400 
+  transition-colors"
+              >
                 <Github size={24} />
               </Link>
-              <Link href="#" className={styles.hero_social_icon}>
+              <Link
+                href="#"
+                className="hover:text-purple-400  transition-colors"
+              >
                 <Linkedin size={24} />
               </Link>
             </motion.div>
           </div>
           {/* Right Column - Code Preview */}
-          <motion.div variants={codeVariants} className={styles.code_snippet}>
-            <div className={styles.code_icon_container}>
-              <div className={styles.code_icon_red} />
-              <div className={styles.code_icon_yellow} />
-              <div className={styles.code_icon_green} />
+          <motion.div
+            variants={codeVariants}
+            className="hidden
+  lg:block
+  bg-gray-900/50
+  backdrop-blur-sm
+  rounded-lg
+  border
+  border-purple-500/20
+  p-6"
+          >
+            <div
+              className=" flex
+  items-center
+  gap-2
+  mb-4"
+            >
+              <div
+                className=" w-3
+  h-3
+  rounded-full
+  bg-red-500"
+              />
+              <div
+                className=" w-3
+  h-3
+  rounded-full
+  bg-yellow-500"
+              />
+              <div
+                className="w-3
+  h-3
+  rounded-full
+  bg-green-500"
+              />
             </div>
             <pre className="font-mono text-sm">
               <code className="text-purple-300">

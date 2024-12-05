@@ -1,5 +1,3 @@
-import project from './project.png';
+import project from "./project.png";
 
-export {
-    project
-}
+export { project };

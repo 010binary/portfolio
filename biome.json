@@ -11,11 +11,7 @@
 	},
 	"formatter": {
 		"enabled": true,
-		"indentStyle": "space",
-		"indentWidth": 2,
-		"lineWidth": 80,
-		"formatWithErrors": true,
-		"bracketSpacing": true
+		"indentStyle": "tab"
 	},
 	"organizeImports": {
 		"enabled": true

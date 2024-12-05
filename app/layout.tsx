@@ -1,27 +1,17 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
+import { Inter } from "next/font/google";
+
 import "./globals.css";
+import { ThemeProvider } from "./provider";
+import { navItems } from "@/data";
+import { FloatingNav } from "@/components/ui/FloatingNavbar";
+import Footer from "@/components/Footer";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
-
-const title = "Patrick's Portfolio";
-const description =
-  "I am a dedicated front-end developer from Ghana. I love to build UIs and websites.";
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: title,
-  description: description,
+  title: "Adrian's Portfolio",
+  description: "Modern & Minimal JS Mastery Portfolio",
 };
 
 export default function RootLayout({
@@ -30,13 +20,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/jsm-logo.png" sizes="any" />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${inter.className} relative bg-black-100 flex justify-center items-center flex-col overflow-x-hidden mx-auto sm:px-10 px-5`}
       >
-        <Header />
-        {children}
-        <Footer />
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <FloatingNav navItems={navItems} />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
