@@ -1,83 +1,98 @@
 "use client";
 
-import { FaLocationArrow } from "react-icons/fa6";
-
+import { FaArrowRight } from "react-icons/fa6";
 import { projects } from "@/data";
-import { PinContainer } from "./ui/Pin";
+import { motion } from "framer-motion";
 
-const RecentProjects = () => {
-	return (
-		<div className="py-20">
-			<h1 className="heading">
-				A small selection of{" "}
-				<span className="text-purple">recent projects</span>
-			</h1>
-			<div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
-				{projects.map((item) => (
-					<div
-						className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
-						key={item.id}
-					>
-						<PinContainer
-							title="/ui.aceternity.com"
-							href="https://twitter.com/mannupaaji"
-						>
-							<div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
-								<div
-									className="relative w-full h-full overflow-hidden lg:rounded-3xl"
-									style={{ backgroundColor: "#13162D" }}
-								>
-									<img src="/bg.png" alt="bgimg" />
-								</div>
-								<img
-									src={item.img}
-									alt="cover"
-									className="z-10 absolute bottom-0"
-								/>
-							</div>
-
-							<h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
-								{item.title}
-							</h1>
-
-							<p
-								className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
-								style={{
-									color: "#BEC1DD",
-									margin: "1vh 0",
-								}}
-							>
-								{item.des}
-							</p>
-
-							<div className="flex items-center justify-between mt-7 mb-3">
-								<div className="flex items-center">
-									{item.iconLists.map((icon, index) => (
-										<div
-											key={index}
-											className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-											style={{
-												transform: `translateX(-${5 * index + 2}px)`,
-											}}
-										>
-											<img src={icon} alt="icon5" className="p-2" />
-										</div>
-									))}
-								</div>
-
-								<div className="flex justify-center items-center">
-									<p className="flex lg:text-xl md:text-xs text-sm text-purple">
-										Check Live Site
-									</p>
-									<FaLocationArrow className="ms-3" color="#CBACF9" />
-								</div>
-							</div>
-						</PinContainer>
-					</div>
-				))}
-			</div>
-		</div>
-	);
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
 };
 
-export default RecentProjects;
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5 },
+  },
+};
+
+export default function RecentProjects() {
+  return (
+    <section className="py-10 pt-20">
+      <div className="container px-4 mx-auto space-y-10">
+        <h2 id="Project-heading" className="heading text-center">
+          A small selection of{" "}
+          <span className="text-purple">recent projects</span>
+        </h2>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
+        >
+          {projects.map((project) => (
+            <motion.div
+              key={project.id}
+              variants={itemVariants}
+              className="group relative bg-[#13162D] rounded-3xl p-6 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/10"
+            >
+              {/* Project Image */}
+              <div className="relative h-[240px] mb-8 rounded-2xl overflow-hidden bg-black/50">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+
+              {/* Project Info */}
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-white/90 line-clamp-1">
+                  {project.title}
+                </h3>
+                <p className="text-gray-400 line-clamp-2 min-h-[48px]">
+                  {project.description}
+                </p>
+
+                {/* Technologies and Live Link */}
+                <div className="flex items-center justify-between pt-4">
+                  <div className="flex -space-x-2">
+                    {project.technologies.map((tech, index) => (
+                      <div
+                        key={index}
+                        className="w-8 h-8 rounded-full border border-white/10 bg-black/50 flex items-center justify-center backdrop-blur-sm"
+                        title={tech.name}
+                      >
+                        <img
+                          src={tech.icon}
+                          alt={tech.name}
+                          className="w-5 h-5 object-contain"
+                        />
+                      </div>
+                    ))}
+                  </div>
+
+                  <a
+                    href={project.liveUrl}
+                    className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
+                  >
+                    <span>Check Live Site</span>
+                    <FaArrowRight className="w-4 h-4" />
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+}
