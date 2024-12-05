@@ -29,7 +29,7 @@ def Developer() -> Union[dict, str]:
 
 
 print(Developer())
-`.trim(),
+`,
 
   java: `
 import java.util.Arrays;
