@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { ExternalLink, Github, Star } from 'lucide-react';
-import Image from 'next/image';
-import Link from 'next/link';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { ExternalLink, Github, Star } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { project } from "@/public/index";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -13,8 +14,8 @@ const containerVariants = {
     transition: {
       staggerChildren: 0.2,
       delayChildren: 0.3,
-    }
-  }
+    },
+  },
 };
 
 const itemVariants = {
@@ -22,56 +23,78 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5 }
-  }
+    transition: { duration: 0.5 },
+  },
 };
 
 const projects = [
   {
     title: "BuildBot GH",
-    description: "A web app for buildbot GH to allow users refer prospective customers for a commission.",
-    image: "https://utfs.io/f/dWqeLnw5zWnM2C45Doke1htkBH4KoIJ6zDxwsuam5PFyqlvY",
-    tags: ["Nextjs", "TypeScript", "Tailwind CSS", "PostgreSQL", "Drizzle", "Zod", "React Hook Form", "React Query", "Vercel"],
+    description:
+      "A web app for buildbot GH to allow users refer prospective customers for a commission.",
+    image: project,
+    tags: [
+      "Nextjs",
+      "TypeScript",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Drizzle",
+      "Zod",
+      "React Hook Form",
+      "React Query",
+      "Vercel",
+    ],
     liveUrl: "https://buildbotgh.com",
     githubUrl: "https://github.com/amartech/buildbot-gh",
-    featured: true
+    featured: true,
   },
   {
     title: "VheeWorld Foundation",
-    description: "A website for VheeWorld Foundation to spread their outreach and also accept donations from potential donors.",
-    image: "https://utfs.io/f/dWqeLnw5zWnMI9yud6Wtbz6fqO7L2XYx8iF9scgVldWn5BZE",
-    tags: ["Nextjs", "typescript", "Tailwind CSS", "PayStack", "Zod", "React Hook Form", "Vercel"],
+    description:
+      "A website for VheeWorld Foundation to spread their outreach and also accept donations from potential donors.",
+    image: project,
+    tags: [
+      "Nextjs",
+      "typescript",
+      "Tailwind CSS",
+      "PayStack",
+      "Zod",
+      "React Hook Form",
+      "Vercel",
+    ],
     liveUrl: "https://vheeworld.org",
-    githubUrl: "https://github.com/amartey-tricky/vhee"
+    githubUrl: "https://github.com/amartey-tricky/vhee",
   },
   {
     title: "Mr Ampadu Portfolio",
-    description: "A porfolio website for Mr. Ampadu, an administrotor of a small business.",
-    image: "https://utfs.io/f/dWqeLnw5zWnMdxtkWaw5zWnMkorTJ3NhZvUSb7uDp0RLf6ls",
+    description:
+      "A porfolio website for Mr. Ampadu, an administrotor of a small business.",
+    image: project,
     tags: ["Astro", "TypeScript", "Tailwind CSS", "Vercel"],
     liveUrl: "https://mrampadu.com",
-    githubUrl: "https://github.com/amartey-tricky/mr-ampadu"
+    githubUrl: "https://github.com/amartey-tricky/mr-ampadu",
   },
   {
     title: "Dr Togobo Portfolio",
     description: "A porfolio website for Dr. Togobo, a medical doctor.",
-    image: "https://utfs.io/f/dWqeLnw5zWnMltcJ3WbLRDXkJfcZSumHT7MsUby8E9GjAnC4",
+    image: project,
     tags: ["Nextjs", "TypeScript", "Tailwind CSS", "Vercel"],
     liveUrl: "https://ambrosetogobo.com",
-    githubUrl: "https://github.com/amartey-tricky/togobo"
-  }
+    githubUrl: "https://github.com/amartey-tricky/togobo",
+  },
 ];
 
 export function Projects() {
-  const [filter, setFilter] = useState('all');
+  const [filter, setFilter] = useState("all");
 
   const filterTags = Array.from(
-    new Set(projects.flatMap(project => project.tags))
+    new Set(projects.flatMap((project) => project.tags))
   );
 
-  const filteredProjects = filter === 'all'
-    ? projects
-    : projects.filter(project => project.tags.includes(filter));
+  const filteredProjects =
+    filter === "all"
+      ? projects
+      : projects.filter((project) => project.tags.includes(filter));
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900">
@@ -82,7 +105,7 @@ export function Projects() {
       </div>
 
       {/* Grid Pattern Overlay */}
-      <div 
+      <div
         className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"
         role="presentation"
       />
@@ -95,24 +118,33 @@ export function Projects() {
           className="space-y-16"
         >
           {/* Hero Section */}
-          <motion.header variants={itemVariants} className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">My Projects</h1>
+          <motion.header
+            variants={itemVariants}
+            className="text-center max-w-3xl mx-auto"
+          >
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              My Projects
+            </h1>
             <p className="text-lg text-gray-300">
-              A collection of my recent work, side projects, and open-source contributions.
-              Each project represents a unique challenge and learning experience.
+              A collection of my recent work, side projects, and open-source
+              contributions. Each project represents a unique challenge and
+              learning experience.
             </p>
           </motion.header>
 
           {/* Filter Navigation */}
-          <motion.nav variants={itemVariants} className="flex flex-wrap justify-center gap-4">
+          <motion.nav
+            variants={itemVariants}
+            className="flex flex-wrap justify-center gap-4"
+          >
             <button
               type="button"
-              onClick={() => setFilter('all')}
-              aria-pressed={filter === 'all'}
+              onClick={() => setFilter("all")}
+              aria-pressed={filter === "all"}
               className={`px-4 py-2 rounded-lg transition-colors ${
-                filter === 'all'
-                  ? 'bg-purple-600 text-white'
-                  : 'text-purple-400 hover:bg-purple-600/10'
+                filter === "all"
+                  ? "bg-purple-600 text-white"
+                  : "text-purple-400 hover:bg-purple-600/10"
               }`}
             >
               All Projects
@@ -125,8 +157,8 @@ export function Projects() {
                 aria-pressed={filter === tag}
                 className={`px-4 py-2 rounded-lg transition-colors ${
                   filter === tag
-                    ? 'bg-purple-600 text-white'
-                    : 'text-purple-400 hover:bg-purple-600/10'
+                    ? "bg-purple-600 text-white"
+                    : "text-purple-400 hover:bg-purple-600/10"
                 }`}
               >
                 {tag}
@@ -145,7 +177,7 @@ export function Projects() {
                 key={index}
                 variants={itemVariants}
                 className={`bg-gray-800/50 backdrop-blur-sm rounded-lg overflow-hidden ${
-                  project.featured ? 'md:col-span-2' : ''
+                  project.featured ? "md:col-span-2" : ""
                 }`}
               >
                 <figure className="relative">
@@ -159,14 +191,21 @@ export function Projects() {
                   {project.featured && (
                     <div className="absolute top-4 right-4 flex items-center gap-2 bg-purple-600 px-3 py-1 rounded-full">
                       <Star className="w-4 h-4" aria-hidden="true" />
-                      <span className="text-sm font-medium">Featured Project</span>
+                      <span className="text-sm font-medium">
+                        Featured Project
+                      </span>
                     </div>
                   )}
                 </figure>
                 <div className="p-6">
-                  <h2 className="text-xl font-bold text-white mb-2">{project.title}</h2>
+                  <h2 className="text-xl font-bold text-white mb-2">
+                    {project.title}
+                  </h2>
                   <p className="text-gray-300 mb-4">{project.description}</p>
-                  <ul className="flex flex-wrap gap-2 mb-6" aria-label="Technologies used">
+                  <ul
+                    className="flex flex-wrap gap-2 mb-6"
+                    aria-label="Technologies used"
+                  >
                     {project.tags.map((tag, tagIndex) => (
                       <li
                         key={tagIndex}

@@ -2,14 +2,15 @@
 
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import styles from "./index.module.css";
+import { project } from "@/public/index";
 
 interface Project {
   title: string;
   description: string;
-  image: string;
+  image: StaticImageData;
   demoLink: string;
   sourceLink: string;
 }
@@ -19,7 +20,7 @@ const projects: Project[] = [
     title: "BuildBot Gh",
     description:
       "A simple web app for Financial House in Ghana to allow users refer others for rewards.",
-    image: "https://utfs.io/f/dWqeLnw5zWnM2C45Doke1htkBH4KoIJ6zDxwsuam5PFyqlvY",
+    image: project,
     demoLink: "htpps://buildbotgh.com",
     sourceLink: "https://github.com/amartey-tricky/buildbot-gh",
   },
@@ -27,7 +28,7 @@ const projects: Project[] = [
     title: "Mr. Ampadu Portfolio",
     description:
       "A portfolio website for Mr. Ampadu, an administrator from Ghana.",
-    image: "https://utfs.io/f/dWqeLnw5zWnMdxtkWaw5zWnMkorTJ3NhZvUSb7uDp0RLf6ls",
+    image: project,
     demoLink: "https://mrampadu.com",
     sourceLink: "https://github.com/amartey-tricky/mr-ampadu",
   },
@@ -35,7 +36,7 @@ const projects: Project[] = [
     title: "VheeWorld Foundation",
     description:
       "A website for the VheeWorld Foundation, a non-profit organization that aims to end streetism in Ghana.",
-    image: "https://utfs.io/f/dWqeLnw5zWnMI9yud6Wtbz6fqO7L2XYx8iF9scgVldWn5BZE",
+    image: project,
     demoLink: "https://vheeworld.org",
     sourceLink: "https://github.com/amartey-tricky/vhee",
   },
