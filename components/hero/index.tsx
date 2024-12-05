@@ -45,7 +45,7 @@ const codeVariants = {
 
 export function HeroContent() {
   return (
-    <section className="relative flex   items-center min-h-screen">
+    <section className="relative flex items-center min-h-[75vh]">
       <div
         className="container
   mx-auto
