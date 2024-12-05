@@ -1,0 +1,180 @@
+.header {
+  @apply fixed
+  top-4
+  left-1/2
+  -translate-x-1/2
+  z-50
+  w-1/2
+  min-w-80;
+}
+
+.glass {
+  @apply absolute
+  inset-0
+  backdrop-blur-md
+  bg-white/70
+  shadow-lg
+  rounded-full;
+}
+
+.nav {
+  @apply relative;
+}
+
+.nav_menu {
+  @apply flex
+  justify-between
+  items-center
+  h-12
+  px-6;
+}
+
+.logo {
+  @apply flex-shrink-0;
+}
+
+.logo_link {
+  @apply text-xl
+  md:text-2xl
+  font-bold
+  bg-gradient-to-r
+  from-purple-600
+  to-purple-400
+  bg-clip-text
+  text-transparent
+  hover:from-purple-500
+  hover:to-purple-300
+  transition-all
+  duration-200;
+}
+
+.desktop_menu {
+  @apply hidden
+  md:flex
+  items-center
+  space-x-6;
+}
+
+.menu_link {
+  @apply relative
+  px-2
+  py-1
+  rounded-lg
+  transition-all
+  duration-200
+  text-sm
+  text-purple-700;
+}
+
+.active {
+  @apply text-purple-600
+  font-medium;
+}
+
+.inactive {
+  @apply text-gray-400
+  hover:text-purple-700;
+}
+
+.mobile_menu {
+  @apply md:hidden;
+}
+
+.mobile_button {
+  @apply p-1.5
+  rounded-full
+  text-gray-600
+  hover:text-purple-700
+  hover:bg-purple-50
+  transition-all
+  duration-200;
+}
+
+.mobile_button_icon {
+  @apply relative
+  w-5
+  h-5;
+}
+
+.menu_icon {
+  @apply absolute
+  transition-all
+  duration-200;
+}
+
+.menu_open {
+  @apply rotate-90
+  opacity-0;
+}
+
+.menu_closed {
+  @apply rotate-0
+  opacity-100;
+}
+
+.x_closed {
+  @apply rotate-0
+  opacity-100;
+}
+
+.x_open {
+  @apply -rotate-90
+  opacity-0;
+}
+
+.mobile_nav {
+  @apply md:hidden
+  overflow-hidden
+  transition-all
+  duration-200
+  ease-in-out;
+}
+
+.open {
+  @apply max-h-64
+  opacity-100;
+}
+
+.closed {
+  @apply max-h-0
+  opacity-0;
+}
+
+.mobile_menu_box {
+  @apply backdrop-blur-md
+  bg-white/90
+  border-t
+  border-purple-100
+  rounded-2xl
+  mt-2
+  transition-all
+  duration-500;
+}
+
+.animation_open {
+  @apply translate-y-0;
+}
+
+.animation_closed {
+  @apply translate-y-full;
+}
+
+.mobile_link {
+  @apply block
+  px-4
+  text-sm
+  transition-all
+  duration-200;
+}
+
+.link_active {
+  @apply bg-purple-50
+  text-purple-700
+  font-medium;
+}
+
+.link_inactive {
+  @apply text-gray-600
+  hover:text-purple-500
+  hover:bg-purple-50;
+}

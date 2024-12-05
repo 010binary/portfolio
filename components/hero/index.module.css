@@ -1,0 +1,182 @@
+.hero {
+  @apply relative
+  flex
+  items-center
+  min-h-screen
+  bg-gradient-to-br
+  from-gray-900
+  via-purple-900
+  to-gray-900;
+}
+
+.animated_container {
+  @apply absolute
+  inset-0
+  overflow-hidden;
+}
+
+.animated_element1 {
+  @apply absolute
+  w-96
+  h-96
+  -top-48
+  -left-48
+  bg-purple-500/20
+  rounded-full
+  blur-3xl;
+}
+
+.animated_element2 {
+  @apply absolute
+  w-96
+  h-96
+  -right-48
+  -bottom-48
+  bg-purple-700/20
+  rounded-full
+  blur-3xl;
+}
+
+.grid_pattern {
+  @apply absolute
+  inset-0
+  bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)]
+  bg-[size:4rem_4rem]
+  [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)];
+}
+
+.grid_container {
+  @apply container
+  mx-auto
+  px-4
+  z-10;
+}
+
+.grid_motion {
+  @apply grid
+  grid-cols-1
+  lg:grid-cols-2
+  gap-12
+  items-center;
+}
+
+.hero_content {
+  @apply space-y-2;
+}
+
+.hero_intro {
+  @apply text-purple-400
+  font-mono;
+}
+
+.hero_name {
+  @apply text-5xl
+  md:text-7xl
+  font-bold
+  text-white
+  mt-2;
+}
+
+.hero_title {
+  @apply text-2xl
+  md:text-3xl
+  text-purple-200
+  mt-2;
+}
+
+.hero_about {
+  @apply text-gray-300
+  text-lg
+  max-w-xl;
+}
+
+.hero_button {
+  @apply flex
+  gap-4;
+}
+
+.hero_button_a {
+  @apply px-6
+  py-3
+  bg-purple-600
+  text-white
+  rounded-lg
+  hover:bg-purple-700
+  transition-colors
+  flex
+  items-center
+  gap-2;
+}
+
+.hero_button_b {
+  @apply px-6
+  py-3
+  border
+  border-purple-400
+  text-purple-400
+  rounded-lg
+  hover:bg-purple-400/10
+  transition-colors
+  flex
+  items-center
+  gap-2;
+}
+
+.hero_social {
+  @apply flex
+  gap-4
+  text-gray-400;
+}
+
+.hero_social_icon {
+  @apply hover:text-purple-400
+  transition-colors;
+}
+
+.code_snippet {
+  @apply hidden
+  lg:block
+  bg-gray-900/50
+  backdrop-blur-sm
+  rounded-lg
+  border
+  border-purple-500/20
+  p-6;
+}
+
+.code_icon_container {
+  @apply flex
+  items-center
+  gap-2
+  mb-4;
+}
+
+.code_icon_red {
+  @apply w-3
+  h-3
+  rounded-full
+  bg-red-500;
+}
+
+.code_icon_yellow {
+  @apply w-3
+  h-3
+  rounded-full
+  bg-yellow-500;
+}
+
+.code_icon_green {
+  @apply w-3
+  h-3
+  rounded-full
+  bg-green-500;
+}
+
+.code_pre {
+  @apply font-mono
+  text-sm;
+}
+
+.code {
+  @apply text-purple-300;
+}
