@@ -26,7 +26,7 @@ const itemVariants = {
 export default function RecentProjects() {
   return (
     <section className="py-10 pt-20">
-      <div className="container px-4 mx-auto space-y-10">
+      <div className="container px-4 mx-auto space-y-16">
         <h2 id="Project-heading" className="heading text-center">
           A small selection of{" "}
           <span className="text-purple">recent projects</span>
