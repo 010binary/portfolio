@@ -7,15 +7,15 @@ import RecentProjects from "@/components/RecentProjects";
 import TimeLine from "@/components/TimeLine";
 
 const Home = () => {
-  return (
-    <main className="max-w-7xl w-full">
-      <Hero />
-      <TimeLine />
-      <RecentProjects />
-      <Clients />
-      <Approach />
-    </main>
-  );
+	return (
+		<main className="max-w-7xl w-full">
+			<Hero />
+			<TimeLine />
+			<RecentProjects />
+			<Clients />
+			<Approach />
+		</main>
+	);
 };
 
 export default Home;

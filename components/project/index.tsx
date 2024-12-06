@@ -44,7 +44,7 @@ const projects = [
 		description:
 			"A website for VheeWorld Foundation to spread their outreach and also accept donations from potential donors.",
 		image: project,
-		tags: ["Nextjs", "typescript", "Tailwind CSS"],
+		tags: ["Nextjs", "TypeScript", "Tailwind CSS"],
 		liveUrl: "https://vheeworld.org",
 		githubUrl: "https://github.com/amartey-tricky/vhee",
 		featured: true,
@@ -120,7 +120,7 @@ export function Projects() {
 					variants={containerVariants}
 					initial="hidden"
 					animate="visible"
-					className="space-y-16"
+					className="space-y-10"
 				>
 					{/* Hero Section */}
 					<motion.header
@@ -128,7 +128,7 @@ export function Projects() {
 						className="text-center max-w-3xl mx-auto"
 					>
 						<h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-							My Projects
+							My <span className="text-purple">Projects </span>
 						</h1>
 						<p className="text-lg text-gray-300">
 							A collection of my recent work, side projects, and open-source
@@ -146,7 +146,7 @@ export function Projects() {
 							type="button"
 							onClick={() => setFilter("all")}
 							aria-pressed={filter === "all"}
-							className={`px-4 py-2 rounded-lg transition-colors ${
+							className={`px-4 py-2 border border-white-200 rounded-lg transition-colors ${
 								filter === "all"
 									? "bg-purple-600 text-white"
 									: "text-purple-400 hover:bg-purple-600/10"
@@ -160,7 +160,7 @@ export function Projects() {
 								type="button"
 								onClick={() => setFilter(tag)}
 								aria-pressed={filter === tag}
-								className={`px-4 py-2 rounded-lg transition-colors ${
+								className={`px-4 py-2 border border-white-200 rounded-lg transition-colors ${
 									filter === tag
 										? "bg-purple-600 text-white"
 										: "text-purple-400 hover:bg-purple-600/10"
@@ -195,7 +195,10 @@ export function Projects() {
 									/>
 									{project.featured && (
 										<div className="absolute top-4 right-4 flex items-center gap-2 bg-purple-600 px-3 py-1 rounded-full">
-											<Star className="w-4 h-4" aria-hidden="true" />
+											<Star
+												className="w-4 h-4 text-yellow-400 fill-yellow-400"
+												aria-hidden="true"
+											/>
 											<span className="text-sm font-medium">
 												Featured Project
 											</span>

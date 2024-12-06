@@ -153,7 +153,7 @@ export default function Contact() {
 						className="text-center max-w-6xl mx-auto"
 					>
 						<h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-							Get in Touch
+							Get in <span className="text-purple"> Touch </span>
 						</h1>
 						<p className="text-lg text-gray-300">
 							Have a question or want to work together? I&apos;d love to hear
