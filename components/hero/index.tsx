@@ -1,9 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code2, ExternalLink, Github, Linkedin } from "lucide-react";
-import Link from "next/link";
+import { Code2, ExternalLink } from "lucide-react";
 import { useState } from "react";
+import MagicButton from "../MagicButton";
+import { socialMedia } from "@/data";
+import Image from "next/image";
+import Link from "next/link";
 
 const codeSnippets = {
   js: `
@@ -104,55 +107,68 @@ export function HeroContent() {
           animate="visible"
         >
           {/* Left Column - Main Content */}
-          <div className="space-y-2">
+          <div className="space-y-4">
             <motion.div variants={itemVariants}>
               <span className="text-purple-400 font-mono">Hello, I&apos;m</span>
               <h1 className="text-5xl md:text-7xl font-bold text-white mt-2">
-                Patrick Annang
+                Augustine Chukwuemeka
               </h1>
               <h2 className="text-2xl md:text-3xl text-purple-200 mt-2">
-                Front-End Developer
+                Software Engineer
               </h2>
             </motion.div>
             <motion.p
               variants={itemVariants}
-              className=" text-gray-300 text-lg max-w-xl"
+              className=" text-gray-300 text-lg max-w-xl text-justify"
             >
-              I craft responsive websites where technology meets creativity.
-              Building beautiful web experiences with modern technologies.
+              I&apos;m a passionate software engineer specializing in building
+              efficient and scalable
+              <span className="text-purple">
+                {" "}
+                backend systems. Based in Lagos, Nigeria,{" "}
+              </span>
+              I&apos;m open to relocation and eager to embrace new challenges.
+              With a strong enthusiasm for learning new technologies, I
+              continually strive to improve and deliver impactful solutions.
             </motion.p>
-            <motion.div variants={itemVariants} className="flex gap-4">
-              <button
-                className="px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors flex items-center gap-2"
-                type="button"
-              >
-                <Code2 size={20} />
-                View Projects
-              </button>
-              <button
-                className="px-6 py-3 border border-purple-400 text-purple-400 rounded-lg hover:bg-purple-400/10 transition-colors flex items-center gap-2"
-                type="button"
-              >
-                <ExternalLink size={20} />
-                Contact Me
-              </button>
+            <motion.div
+              variants={itemVariants}
+              className="flex items-center gap-4"
+            >
+              <Link href="#Project-heading">
+                <MagicButton
+                  title="View Projects"
+                  icon={<Code2 size={20} />}
+                  position="right"
+                />
+              </Link>
+              <Link href="mailto:asogwaaugustineemeka@gmail.com">
+                <MagicButton
+                  title="Contact Me"
+                  icon={<ExternalLink size={20} />}
+                  position="right"
+                />
+              </Link>
             </motion.div>
             <motion.div
               variants={itemVariants}
-              className="flex gap-4 text-gray-400"
+              className="flex items-center gap-4"
             >
-              <Link
-                href="#"
-                className="hover:text-purple-400 transition-colors"
-              >
-                <Github size={24} />
-              </Link>
-              <Link
-                href="#"
-                className="hover:text-purple-400  transition-colors"
-              >
-                <Linkedin size={24} />
-              </Link>
+              {socialMedia.map((info) => (
+                <div
+                  key={info.id}
+                  className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
+                >
+                  <Link href={info.href}>
+                    <Image
+                      src={info.img}
+                      alt={info.img}
+                      width={20}
+                      height={20}
+                    />
+                  </Link>
+                </div>
+              ))}
             </motion.div>
           </div>
           {/* Right Column - Code Preview */}

@@ -109,21 +109,20 @@ export const testimonials = [
   },
 ];
 
-
-// add work experience
-
-
 export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    href: "https://github.com/010binary"
   },
   {
     id: 2,
     img: "/twit.svg",
+    href: "https://x.com/August13200296"
   },
   {
     id: 3,
     img: "/link.svg",
+    href: "https://www.linkedin.com/in/alpha-augustine/"
   },
 ];
