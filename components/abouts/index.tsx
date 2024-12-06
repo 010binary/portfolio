@@ -1,16 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-	Brain,
-	Code2,
-	Coffee,
-	Cpu,
-	GitBranch,
-	Palette,
-	Terminal,
-	Zap,
-} from "lucide-react";
+import { skills, technologies } from "@/data";
 import { useState } from "react";
 import { Spotlight } from "../ui/Spotlight";
 import TimeLine from "@/components/TimeLine";
@@ -35,71 +26,7 @@ const itemVariants = {
 	},
 };
 
-const skills = [
-	{
-		name: "Frontend Development",
-		icon: Code2,
-		description: "Building responsive and interactive user interfaces",
-	},
-	{
-		name: "UI/UX Design",
-		icon: Palette,
-		description: "Creating intuitive and beautiful user experiences",
-	},
-	{
-		name: "Problem Solving",
-		icon: Brain,
-		description: "Finding elegant solutions to complex problems",
-	},
-	{
-		name: "Technical Architecture",
-		icon: Cpu,
-		description: "Designing scalable application structures",
-	},
-	{
-		name: "Version Control",
-		icon: GitBranch,
-		description: "Managing code with Git and GitHub",
-	},
-	{
-		name: "Command Line",
-		icon: Terminal,
-		description: "Proficient in terminal operations and scripting",
-	},
-	{
-		name: "Quick Learner",
-		icon: Zap,
-		description: "Rapidly adapting to new technologies",
-	},
-	{
-		name: "Team Collaboration",
-		icon: Coffee,
-		description: "Working effectively in agile environments",
-	},
-];
 
-const technologies = [
-	{
-		category: "Frontend",
-		items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "StoryBook"],
-	},
-	{
-		category: "Mobile",
-		items: ["React Native", "Expo"],
-	},
-	{
-		category: "State Management",
-		items: ["Zustand", "React Query"],
-	},
-	{
-		category: "Testing",
-		items: ["Jest"],
-	},
-	{
-		category: "Tools",
-		items: ["VS Code", "Git", "Docker", "Webpack", "NeoVim"],
-	},
-];
 
 export function About() {
 	const [activeTab, setActiveTab] = useState("skills");

@@ -7,58 +7,7 @@ import MagicButton from "../MagicButton";
 import { socialMedia } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
-
-const codeSnippets = {
-	js: `
-function Developer() {
-  return (
-    skills: ["React", "Next.js", "TailwindCSS", "TypeScript", 
-              "HTML", "CSS", "JavaScript", "DrizzleORM", "SQL",
-              "PostGres"
-            ],
-    passion: "Building beautiful UIs and websites",
-  )
-}
-console.log(Developer())
-`.trim(),
-
-	py: `
-from typing import Union
-
-
-def Developer() -> Union[dict, str]:
-    return {
-        "skills": ["React", "Next.js", "TailwindCSS",
-                   "TypeScript", "HTML", "CSS", 
-                   "JavaScript", "DrizzleORM", "SQL", 
-                   "PostGres"
-                  ],
-        "passion": "Building beautiful UIs and websites",
-    }
-
-
-print(Developer())
-`.trim(),
-
-	java: `
-import java.util.Arrays;
-
-public class Main {
-    public static void main(String[] args) {
-        String[] skills = { 
-                            "React", "Next.js", "TailwindCSS",
-                            "TypeScript", "HTML", "CSS", 
-                            "JavaScript", "DrizzleORM", "SQL",
-                            "PostGres"
-                          };
-
-        String passion = "Building beautiful UIs and websites";
-        System.out.println("Skills: " + Arrays.toString(skills));
-        System.out.println("Passion: " + passion);
-    }
-}
-`.trim(),
-};
+import { codeSnippets } from "@/data";
 
 const containerVariants = {
 	hidden: { opacity: 0 },
@@ -66,7 +15,7 @@ const containerVariants = {
 		opacity: 1,
 		transition: {
 			staggerChildren: 0.2,
-			delayChildren: 0.3,
+			delayChildren: 0.2,
 		},
 	},
 };

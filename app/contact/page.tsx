@@ -2,11 +2,12 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, MessageSquare, Phone, Send, User } from "lucide-react";
+import { Mail, Send, User } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Spotlight } from "@/components/ui/Spotlight";
 import * as z from "zod";
+import { contactMethods } from "@/data";
 
 // Form Schema
 const contactFormSchema = z.object({
@@ -38,28 +39,6 @@ const itemVariants = {
 		transition: { duration: 0.5 },
 	},
 };
-
-// Contact methods data
-const contactMethods = [
-	{
-		icon: Phone,
-		title: "Call me",
-		description: "Mon-Fri from 8am to 6pm.",
-		contact: "+233 50 113 4927",
-	},
-	{
-		icon: Mail,
-		title: "Email me",
-		description: "I'll respond within 24 hours.",
-		contact: "trickya23@outlook.com",
-	},
-	{
-		icon: MessageSquare,
-		title: "Message me",
-		description: "Let's connect on Twitter.",
-		contact: "@ataa_nkpa1",
-	},
-];
 
 export default function Contact() {
 	const [formStatus, setFormStatus] = useState({

@@ -8,9 +8,7 @@ const Approach = () => {
 			<h1 className="heading">
 				My <span className="text-purple">Approach</span>
 			</h1>
-			{/* remove bg-white dark:bg-black */}
 			<div className="flex flex-col lg:flex-row items-center justify-center w-full gap-4">
-				{/* add des prop */}
 				<Card
 					title="Planning & Strategy"
 					icon={<AceternityIcon order="Phase 1" />}
@@ -67,7 +65,6 @@ const Card = ({
 	title,
 	icon,
 	children,
-	// add this one for the desc
 	des,
 }: {
 	title: string;
@@ -111,22 +108,18 @@ const Card = ({
 
 			<div className="relative z-20 px-10">
 				<div
-					// add this for making it center
-					// absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]
 					className="text-center group-hover/canvas-card:-translate-y-4 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] 
         group-hover/canvas-card:opacity-0 transition duration-200 min-w-40 mx-auto flex items-center justify-center"
 				>
 					{icon}
 				</div>
 				<h2
-					// change text-3xl, add text-center
 					className="dark:text-white text-center text-3xl opacity-0 group-hover/canvas-card:opacity-100
          relative z-10 text-black mt-4  font-bold group-hover/canvas-card:text-white 
          group-hover/canvas-card:-translate-y-2 transition duration-200"
 				>
 					{title}
 				</h2>
-				{/* add this one for the description */}
 				<p
 					className="text-sm opacity-0 group-hover/canvas-card:opacity-100
          relative z-10 mt-4 group-hover/canvas-card:text-white text-center
@@ -143,10 +136,6 @@ const Card = ({
 const AceternityIcon = ({ order }: { order: string }) => {
 	return (
 		<div>
-			{/* this btn is from https://ui.aceternity.com/components/tailwindcss-buttons border magic */}
-			{/* change rounded-lg, text-purple px-5 py-2 */}
-			{/* remove focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 cuz we don't need to focus */}
-			{/* remove text-sm font-medium h-12 , add font-bold text-2xl */}
 			<button className="relative inline-flex overflow-hidden rounded-full p-[1px] ">
 				<span
 					className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite]

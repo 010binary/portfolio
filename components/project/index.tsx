@@ -6,7 +6,7 @@ import { ExternalLink, Github, Star } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Spotlight } from "../ui/Spotlight";
-import { project } from "@/public/index";
+import { projectArr } from "@/data";
 
 const containerVariants = {
 	hidden: { opacity: 0 },
@@ -28,57 +28,18 @@ const itemVariants = {
 	},
 };
 
-const projects = [
-	{
-		title: "BuildBot GH",
-		description:
-			"A web app for buildbot GH to allow users refer prospective customers for a commission.",
-		image: project,
-		tags: ["Nextjs", "TypeScript", "Tailwind CSS", "PostgreSQL"],
-		liveUrl: "https://buildbotgh.com",
-		githubUrl: "https://github.com/amartech/buildbot-gh",
-		featured: true,
-	},
-	{
-		title: "VheeWorld Foundation",
-		description:
-			"A website for VheeWorld Foundation to spread their outreach and also accept donations from potential donors.",
-		image: project,
-		tags: ["Nextjs", "TypeScript", "Tailwind CSS"],
-		liveUrl: "https://vheeworld.org",
-		githubUrl: "https://github.com/amartey-tricky/vhee",
-		featured: true,
-	},
-	{
-		title: "Mr Ampadu Portfolio",
-		description:
-			"A porfolio website for Mr. Ampadu, an administrotor of a small business.",
-		image: project,
-		tags: ["Astro", "TypeScript", "Tailwind CSS", "Vercel"],
-		liveUrl: "https://mrampadu.com",
-		githubUrl: "https://github.com/amartey-tricky/mr-ampadu",
-	},
-	{
-		title: "Dr Togobo Portfolio",
-		description: "A porfolio website for Dr. Togobo, a medical doctor.",
-		image: project,
-		tags: ["Nextjs", "TypeScript", "Tailwind CSS", "Vercel"],
-		liveUrl: "https://ambrosetogobo.com",
-		githubUrl: "https://github.com/amartey-tricky/togobo",
-	},
-];
 
 export function Projects() {
 	const [filter, setFilter] = useState("all");
 
 	const filterTags = Array.from(
-		new Set(projects.flatMap((project) => project.tags)),
+		new Set(projectArr.flatMap((project) => project.tags)),
 	);
 
 	const filteredProjects =
 		filter === "all"
-			? projects
-			: projects.filter((project) => project.tags.includes(filter));
+			? projectArr
+			: projectArr.filter((project) => project.tags.includes(filter));
 
 	return (
 		<main className="min-h-screen ">
