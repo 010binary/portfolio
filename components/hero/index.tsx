@@ -211,7 +211,7 @@ export function HeroContent() {
 								<div className="w-3 h-3 rounded-full bg-green-500" />
 							</div>
 						</div>
-						<div className="p-6 overflow-x-scroll">
+						<div className="p-6 overflow-x-scroll lg:overflow-x-hidden">
 							<pre className="font-mono text-sm">
 								<code className="text-purple-300">
 									{codeSnippets[activeTab].split("\n").map((line, i) => (
