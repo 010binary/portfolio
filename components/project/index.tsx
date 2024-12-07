@@ -53,12 +53,11 @@ export function Projects() {
 					fill="white"
 				/>
 				<Spotlight
-					className="h-[80vh] w-[50vw] top-10 left-full"
+					className="h-[80vh] w-[50vw] top-26 md:top-10 left-0 md:left-full"
 					fill="purple"
 				/>
-				<Spotlight className="left-80 top-28 h-[80vh] w-[50vw]" fill="blue" />
+				<Spotlight className="left-72 md:left-80 top-28 h-[80vh] w-[50vw]" fill="blue" />
 			</div>
-
 			{/**
 			 *  UI: grid
 			 *  change bg color to bg-black-100 and reduce grid color from
