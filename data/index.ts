@@ -2,12 +2,16 @@ import {
 	Brain,
 	Code2,
 	Coffee,
-	Cpu,
 	GitBranch,
-	Palette,
+	Server,
 	Terminal,
 	Zap,
-	Mail, MessageSquare, Phone,
+	Mail,
+	MessageSquare,
+	Phone,
+	Linkedin,
+	Twitter,
+	Database,
 } from "lucide-react";
 import { project } from "@/public/index";
 
@@ -69,7 +73,6 @@ export const projectArr = [
 		githubUrl: "https://github.com/amartey-tricky/togobo",
 	},
 ];
-
 
 export const projects: Project[] = [
 	{
@@ -137,33 +140,27 @@ export const projects: Project[] = [
 export const testimonials = [
 	{
 		quote:
-			"Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-		name: "Michael Johnson",
-		title: "Director of AlphaStream Technologies",
+			"I had the pleasure of working alongside Augustine Chukwuemeka at Foremedia (https://foremediagroup.com/). He is a very talented software engineer. Augustine has consistently demonstrated his passion and exceptional ability to solve complex problems and deliver high-quality solutions which will make him an invaluable asset to any team. I highly recommend him for any challenging development projects!",
+		name: "Nsikak Ekpo mMBA",
+		title: "Manager at ForeMedia Group UK Limited",
+		social: Linkedin,
+		profile: "/1716149761570.jpeg",
 	},
 	{
 		quote:
-			"Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-		name: "Michael Johnson",
-		title: "Director of AlphaStream Technologies",
+			"I had the pleasure of working with Augustine, and he stands out as an exceptional problem solver who approaches challenges with creativity and precision. He’s highly time-conscious, consistently delivering quality work within deadlines. What truly sets Augustine apart is his passion for software development, his enthusiasm drives him to continually teach and learn from his teammates, making him a proactive and invaluable team player.",
+		name: "Aslam Dhikrullahi",
+		title: " Graphic designer / Co-Founder of Adtec Innovation Studios",
+		social: Linkedin,
+		profile: "/1690870466399.jpeg",
 	},
 	{
 		quote:
-			"Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-		name: "Michael Johnson",
-		title: "Director of AlphaStream Technologies",
-	},
-	{
-		quote:
-			"Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-		name: "Michael Johnson",
-		title: "Director of AlphaStream Technologies",
-	},
-	{
-		quote:
-			"Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-		name: "Michael Johnson",
-		title: "Director of AlphaStream Technologies",
+			"Collaborating with Augustine was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Augustine's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Augustine is the ideal partner.",
+		name: "Ivivid",
+		title: "CEO of Topline Trading",
+		social: Twitter,
+		profile: "/1234557454.svg",
 	},
 ];
 
@@ -217,46 +214,48 @@ def Developer() -> Union[dict, str]:
 print(Developer())
 `.trim(),
 
-	java: `
-import java.util.Arrays;
+	// this is the Java part
+	// 	java: `
+	// import java.util.Arrays;
 
-public class Main {
-    public static void main(String[] args) {
-        String[] skills = { 
-                            "React", "Next.js", "TailwindCSS",
-                            "TypeScript", "HTML", "CSS", 
-                            "JavaScript", "DrizzleORM", "SQL",
-                            "PostGres"
-                          };
+	// public class Main {
+	//     public static void main(String[] args) {
+	//         String[] skills = {
+	//                             "React", "Next.js", "TailwindCSS",
+	//                             "TypeScript", "HTML", "CSS",
+	//                             "JavaScript", "DrizzleORM", "SQL",
+	//                             "PostGres"
+	//                           };
 
-        String passion = "Building beautiful UIs and websites";
-        System.out.println("Skills: " + Arrays.toString(skills));
-        System.out.println("Passion: " + passion);
-    }
-}
-`.trim(),
+	//         String passion = "Building beautiful UIs and websites";
+	//         System.out.println("Skills: " + Arrays.toString(skills));
+	//         System.out.println("Passion: " + passion);
+	//     }
+	// }
+	// `.trim(),
 };
 
 export const skills = [
 	{
 		name: "Backend Development",
 		icon: Code2,
-		description: "Building responsive and interactive user interfaces",
+		description: "Building scalable and reliable server-side applications",
 	},
 	{
-		name: "UI/UX Design",
-		icon: Palette,
-		description: "Creating intuitive and beautiful user experiences",
+		name: "Database Management",
+		icon: Database,
+		description:
+			"Efficiently managing and optimizing relational and NoSQL databases.",
+	},
+	{
+		name: "API Development",
+		icon: Server,
+		description: "Designing and implementing RESTful and GraphQL APIs",
 	},
 	{
 		name: "Problem Solving",
 		icon: Brain,
 		description: "Finding elegant solutions to complex problems",
-	},
-	{
-		name: "Technical Architecture",
-		icon: Cpu,
-		description: "Designing scalable application structures",
 	},
 	{
 		name: "Version Control",
@@ -283,11 +282,19 @@ export const skills = [
 export const technologies = [
 	{
 		category: "Languages",
-		items: ["JavaScript", "TypeScript", "Python",],
+		items: ["JavaScript", "TypeScript", "Python"],
 	},
 	{
 		category: "Frameworks",
-		items: ["Django", "ExpressJs", "FastAPI", "Apollo", "NextJs", "Flask", "websocket"],
+		items: [
+			"Django",
+			"ExpressJs",
+			"FastAPI",
+			"Apollo",
+			"NextJs",
+			"Flask",
+			"websocket",
+		],
 	},
 	{
 		category: "Databases",
@@ -295,7 +302,14 @@ export const technologies = [
 	},
 	{
 		category: "Testing",
-		items: ["Postman", "insomnia", "pytest", "Jest", "unittest", "mocha and chia"],
+		items: [
+			"Postman",
+			"insomnia",
+			"pytest",
+			"Jest",
+			"unittest",
+			"mocha and chia",
+		],
 	},
 	{
 		category: "Version Control",
@@ -303,7 +317,15 @@ export const technologies = [
 	},
 	{
 		category: "Deployment",
-		items: ["cPanel", "VPS", "Render", "Aws", "Vercel", "DigitalOcean", "PythonAnywhere"],
+		items: [
+			"cPanel",
+			"VPS",
+			"Render",
+			"Aws",
+			"Vercel",
+			"DigitalOcean",
+			"PythonAnywhere",
+		],
 	},
 	{
 		category: "Application monitoring",
@@ -311,10 +333,9 @@ export const technologies = [
 	},
 	{
 		category: "Other Tools",
-		items: ["Docker", "BASH", "Kafka", "RabbitMq", "Celery", "Github Actions",],
+		items: ["Docker", "BASH", "Kafka", "RabbitMq", "Celery", "Github Actions"],
 	},
 ];
-
 
 export const contactMethods = [
 	{
@@ -322,47 +343,55 @@ export const contactMethods = [
 		title: "Call me",
 		description: "Mon-Fri from 8am to 6pm.",
 		contact: "+234 811 341 7474",
-		href: "tel:+234 811 341 7474"
+		href: "tel:+234 811 341 7474",
 	},
 	{
 		icon: Mail,
 		title: "Email me",
 		description: "I'll respond within 24 hours.",
 		contact: "Asogwaaugustineemeka@gmail.com",
-		href: "mailto:Asogwaaugustineemeka@gmail.com"
+		href: "mailto:Asogwaaugustineemeka@gmail.com",
 	},
 	{
 		icon: MessageSquare,
 		title: "Message me",
 		description: "Let's connect on Twitter.",
 		contact: "@August13200296",
-		href: "https://x.com/August13200296"
+		href: "https://x.com/August13200296",
 	},
 ];
 
 export const experiences = [
 	{
-		title: "Frontend Developer",
-		date: "2022 - Present",
+		title: "Backend Developer (Contract)",
+		company: "Fuziondot",
+		date: "Sep 2024 – Nov 2024",
+		location: "Remote, UK",
 		description:
-			"Developed and maintained multiple React applications, implemented responsive designs, and collaborated with UX designers to create intuitive user interfaces.",
+			"Designed and developed a real-time data gathering system using Puppeteer, Node.js, and Socket.io, enabling seamless scraping and delivery of validated data. Optimized performance with MongoDB Clusters and containerized backend services using Docker, and integrated an AI-powered chat system leveraging ChatGPT to improve user engagement.",
 	},
 	{
-		title: "Junior Developer",
-		date: "2020 - 2022",
+		title: "Backend Developer",
+		company: "ForeMedia Group UK Limited",
+		date: "May 2024 – Oct 2024",
+		location: "Lagos, Nigeria",
 		description:
-			"Started my journey in web development, working on various projects and learning fundamental technologies and best practices.",
+			"Collaborated with a cross-functional team to build a streaming service for African entertainment, developing RESTful APIs with Node.js and Express and integrating Supabase for data management. Implemented video processing pipelines using Python and Django-ninja, and optimized front-end performance with Next.js using SSR and SSG. Established automated testing and CI/CD pipelines to ensure code quality and efficient deployments.",
 	},
 	{
-		title: "Software Engineer",
-		date: "2019 - 2020",
+		title: "Backend Developer",
+		company: "Asque Africa",
+		date: "Sep 2023 – Aug 2024",
+		location: "Lagos, Nigeria",
 		description:
-			"Gained hands-on experience in web development, assisting senior developers in various projects and learning industry standards.",
+			"Developed a community-driven digital publishing and marketplace platform, connecting African creatives globally. Used NestJS and Node.js with MongoDB for the backend and React.js with Redux for a responsive front-end experience. Implemented a scalable microservices architecture using Docker, enabling efficient deployment and scaling of features like listing and selling African-themed literature and artwork.",
 	},
 	{
-		title: "Software Engineer",
-		date: "2019 - 2020",
+		title: "Backend Developer",
+		company: "Adtec Innovation Studios",
+		date: "Aug 2023 – Mar 2024",
+		location: "Lagos, Nigeria",
 		description:
-			"Gained hands-on experience in web development, assisting senior developers in various projects and learning industry standards.",
+			"Led the development of an internal tool to automate critical business processes, including order management, invoicing, and inventory tracking. Built the backend using Django and MySQL, leveraging Django ORM for efficient database operations. Designed modular RESTful APIs with Django REST Framework and implemented unit and integration tests, achieving a 40% improvement in operational efficiency. Set up CI/CD pipelines with GitHub Actions for streamlined deployment.",
 	},
 ];

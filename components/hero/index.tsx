@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code2, ExternalLink } from "lucide-react";
+import { ExternalLink, FileBadge } from "lucide-react";
 import { useState } from "react";
 import MagicButton from "../MagicButton";
 import { socialMedia } from "@/data";
@@ -45,7 +45,8 @@ const tabVariants = {
 };
 
 export function HeroContent() {
-	const [activeTab, setActiveTab] = useState<"js" | "py" | "java">("js");
+	// const [activeTab, setActiveTab] = useState<"js" | "py" | "java">("js");
+	const [activeTab, setActiveTab] = useState<"js" | "py">("js");
 	return (
 		<section className="relative flex items-center min-h-[75vh] mb-10 lg:mb-0">
 			<div className="container mx-auto px-4 z-10;">
@@ -84,10 +85,13 @@ export function HeroContent() {
 							variants={itemVariants}
 							className="flex items-center gap-4"
 						>
-							<Link href="#Project-heading">
+							<Link
+								href="https://drive.google.com/file/d/1DvYCeGoPZO-WX1xRZE5fu8KBwOiCBVt5/view?usp=sharing"
+								target="_blank"
+							>
 								<MagicButton
-									title="View Projects"
-									icon={<Code2 size={20} />}
+									title="My Resume"
+									icon={<FileBadge size={20} />}
 									position="right"
 								/>
 							</Link>
@@ -145,14 +149,15 @@ export function HeroContent() {
 								>
 									Python
 								</motion.button>
-								<motion.button
+								{/* this is the Java part  */}
+								{/* <motion.button
 									variants={tabVariants}
 									animate={activeTab === "java" ? "active" : "inactive"}
 									onClick={() => setActiveTab("java")}
 									className="px-4 py-2 text-sm font-medium focus:outline-none"
 								>
 									Java
-								</motion.button>
+								</motion.button> */}
 							</div>
 							<div className="flex items-center gap-2">
 								<div className="w-3 h-3 rounded-full bg-red-500" />

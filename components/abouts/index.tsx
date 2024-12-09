@@ -25,8 +25,6 @@ const itemVariants = {
 	},
 };
 
-
-
 export function About() {
 	const [activeTab, setActiveTab] = useState("skills");
 
