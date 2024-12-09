@@ -110,7 +110,7 @@ export const projects: Project[] = [
 		title: "AI Image SaaS - Canva Application",
 		description:
 			"A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-		image: "/p3.svg",
+		image: "/p3.png",
 		technologies: [
 			{ name: "React", icon: "/re.svg" },
 			{ name: "Tailwind", icon: "/tail.svg" },
@@ -118,22 +118,7 @@ export const projects: Project[] = [
 			{ name: "Three.js", icon: "/three.svg" },
 			{ name: "Cloudflare", icon: "/c.svg" },
 		],
-		liveUrl: "/ui.aiimg.com",
-	},
-	{
-		id: 4,
-		title: "Animated Apple iPhone 3D Website",
-		description:
-			"Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects.",
-		image: "/p4.svg",
-		technologies: [
-			{ name: "Next.js", icon: "/next.svg" },
-			{ name: "Tailwind", icon: "/tail.svg" },
-			{ name: "TypeScript", icon: "/ts.svg" },
-			{ name: "Three.js", icon: "/three.svg" },
-			{ name: "GSAP", icon: "/gsap.svg" },
-		],
-		liveUrl: "/ui.apple.com",
+		liveUrl: "https://augustine1234.pythonanywhere.com/",
 	},
 ];
 
@@ -158,7 +143,7 @@ export const testimonials = [
 		quote:
 			"Collaborating with Augustine was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Augustine's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Augustine is the ideal partner.",
 		name: "Ivivid",
-		title: "CEO of Topline Trading",
+		title: "CEO of Topline Trading Limited",
 		social: Twitter,
 		profile: "/1234557454.svg",
 	},
@@ -293,7 +278,6 @@ export const technologies = [
 			"Apollo",
 			"NextJs",
 			"Flask",
-			"websocket",
 		],
 	},
 	{

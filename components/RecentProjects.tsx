@@ -47,10 +47,11 @@ export default function RecentProjects() {
 						>
 							{/* Project Image */}
 							<div className="relative h-[240px] mb-8 rounded-2xl overflow-hidden bg-black/50">
-								<img
+								<Image
 									src={project.image}
 									alt={project.title}
-									className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
+									fill
+									className="object-cover object-center transform group-hover:scale-105 transition-transform duration-300"
 								/>
 							</div>
 
