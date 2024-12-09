@@ -3,6 +3,7 @@
 import { FaArrowRight } from "react-icons/fa6";
 import { projects } from "@/data";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const containerVariants = {
 	hidden: { opacity: 0 },
@@ -71,9 +72,11 @@ export default function RecentProjects() {
 												className="w-8 h-8 rounded-full border border-white/10 bg-black/50 flex items-center justify-center backdrop-blur-sm"
 												title={tech.name}
 											>
-												<img
+												<Image
 													src={tech.icon}
 													alt={tech.name}
+													width={20}
+													height={20}
 													className="w-5 h-5 object-contain"
 												/>
 											</div>
