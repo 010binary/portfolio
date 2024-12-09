@@ -39,7 +39,7 @@ const TimeLine = () => {
 					<motion.li
 						key={index}
 						variants={itemVariants}
-						className="relative pl-8 border-l-2 border-purple-600"
+						className="relative pl-2 md:pl-8 border-l-2 border-purple-600"
 					>
 						<div
 							className="absolute w-4 h-4 bg-purple-600 rounded-full -left-[9px] top-0"
@@ -52,7 +52,7 @@ const TimeLine = () => {
 							<p className="text-gray-300 mt-2">{experience.company}</p>
 							<time className="text-gray-300 ">{experience.date}</time>
 							<p className="text-gray-300 ">{experience.location}</p>
-							<p className="text-gray-300 mt-3">{experience.description}</p>
+							<p className="text-gray-300 mt-3 text-justify">{experience.description}</p>
 						</article>
 					</motion.li>
 				))}
