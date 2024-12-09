@@ -1,35 +1,5 @@
 import { motion } from "framer-motion";
-
-interface ExperienceItem {
-	title: string;
-	date: string;
-	description: string;
-}
-
-interface TimeLineProps {
-	experiences: ExperienceItem[];
-}
-
-const experiences = [
-	{
-		title: "Frontend Developer",
-		date: "2022 - Present",
-		description:
-			"Developed and maintained multiple React applications, implemented responsive designs, and collaborated with UX designers to create intuitive user interfaces.",
-	},
-	{
-		title: "Junior Developer",
-		date: "2020 - 2022",
-		description:
-			"Started my journey in web development, working on various projects and learning fundamental technologies and best practices.",
-	},
-	{
-		title: "Intern",
-		date: "2019 - 2020",
-		description:
-			"Gained hands-on experience in web development, assisting senior developers in various projects and learning industry standards.",
-	},
-];
+import { experiences } from "@/data";
 
 const containerVariants = {
 	hidden: { opacity: 0 },

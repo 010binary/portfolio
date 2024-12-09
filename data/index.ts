@@ -282,24 +282,36 @@ export const skills = [
 
 export const technologies = [
 	{
-		category: "Frontend",
-		items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "StoryBook"],
+		category: "Languages",
+		items: ["JavaScript", "TypeScript", "Python",],
 	},
 	{
-		category: "Mobile",
-		items: ["React Native", "Expo"],
+		category: "Frameworks",
+		items: ["Django", "ExpressJs", "FastAPI", "Apollo", "NextJs", "Flask", "websocket"],
 	},
 	{
-		category: "State Management",
-		items: ["Zustand", "React Query"],
+		category: "Databases",
+		items: ["MySQL", "SQLite", "Redis", "PostgreSQL", "MongoDB", "SupaBase"],
 	},
 	{
 		category: "Testing",
-		items: ["Jest"],
+		items: ["Postman", "insomnia", "pytest", "Jest", "unittest", "mocha and chia"],
 	},
 	{
-		category: "Tools",
-		items: ["VS Code", "Git", "Docker", "Webpack", "NeoVim"],
+		category: "Version Control",
+		items: ["Git", "Github", "Gitlab"],
+	},
+	{
+		category: "Deployment",
+		items: ["cPanel", "VPS", "Render", "Aws", "Vercel", "DigitalOcean", "PythonAnywhere"],
+	},
+	{
+		category: "Application monitoring",
+		items: ["Datadog", "Sentry", "Prometheus"],
+	},
+	{
+		category: "Other Tools",
+		items: ["Docker", "BASH", "Kafka", "RabbitMq", "Celery", "Github Actions",],
 	},
 ];
 
@@ -310,17 +322,47 @@ export const contactMethods = [
 		title: "Call me",
 		description: "Mon-Fri from 8am to 6pm.",
 		contact: "+234 811 341 7474",
+		href: "tel:+234 811 341 7474"
 	},
 	{
 		icon: Mail,
 		title: "Email me",
 		description: "I'll respond within 24 hours.",
 		contact: "Asogwaaugustineemeka@gmail.com",
+		href: "mailto:Asogwaaugustineemeka@gmail.com"
 	},
 	{
 		icon: MessageSquare,
 		title: "Message me",
 		description: "Let's connect on Twitter.",
 		contact: "@August13200296",
+		href: "https://x.com/August13200296"
+	},
+];
+
+export const experiences = [
+	{
+		title: "Frontend Developer",
+		date: "2022 - Present",
+		description:
+			"Developed and maintained multiple React applications, implemented responsive designs, and collaborated with UX designers to create intuitive user interfaces.",
+	},
+	{
+		title: "Junior Developer",
+		date: "2020 - 2022",
+		description:
+			"Started my journey in web development, working on various projects and learning fundamental technologies and best practices.",
+	},
+	{
+		title: "Software Engineer",
+		date: "2019 - 2020",
+		description:
+			"Gained hands-on experience in web development, assisting senior developers in various projects and learning industry standards.",
+	},
+	{
+		title: "Software Engineer",
+		date: "2019 - 2020",
+		description:
+			"Gained hands-on experience in web development, assisting senior developers in various projects and learning industry standards.",
 	},
 ];
