@@ -32,6 +32,7 @@ export interface Project {
 		icon: string;
 	}[];
 	liveUrl: string;
+	githubUrl?: string;
 }
 
 export const projectArr = [
@@ -77,48 +78,51 @@ export const projectArr = [
 export const projects: Project[] = [
 	{
 		id: 1,
-		title: "3D Solar System Planets to Explore",
+		title: "Topline Trading",
 		description:
-			"Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-		image: "/p1.svg",
+			"Topline Trading is a leading provider of funds and equity for talented traders to expand their trading portfolios.",
+		image: "/tt.png",
 		technologies: [
-			{ name: "React", icon: "/re.svg" },
-			{ name: "Tailwind", icon: "/tail.svg" },
-			{ name: "TypeScript", icon: "/ts.svg" },
-			{ name: "Three.js", icon: "/three.svg" },
-			{ name: "Framer Motion", icon: "/fm.svg" },
+			{ name: "Next.js", icon: "/tools/build/next.svg" },
+			{ name: "Tailwind", icon: "/tools/build/tail.svg" },
+			{ name: "TypeScript", icon: "/tools/build/ts.svg" },
+			{ name: "PostgreSql", icon: "/tools/pgsql.svg" },
+			{ name: "Docker", icon: "/tools/dock.svg" },
+			{ name: "Sentry", icon: "/tools/sentry.svg" },
 		],
-		liveUrl: "/ui.earth.com",
+		liveUrl: "https://toplinetrading.co/",
 	},
 	{
 		id: 2,
-		title: "Yoom - Video Conferencing App",
+		title: "Topline Trading",
 		description:
-			"Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-		image: "/p2.svg",
+			"Topline Trading is a leading provider of funds and equity for talented traders to expand their trading portfolios.",
+		image: "/tt.png",
 		technologies: [
-			{ name: "Next.js", icon: "/next.svg" },
-			{ name: "Tailwind", icon: "/tail.svg" },
-			{ name: "TypeScript", icon: "/ts.svg" },
-			{ name: "WebRTC", icon: "/stream.svg" },
-			{ name: "Cloudflare", icon: "/c.svg" },
+			{ name: "Next.js", icon: "/tools/build/next.svg" },
+			{ name: "Tailwind", icon: "/tools/build/tail.svg" },
+			{ name: "TypeScript", icon: "/tools/build/ts.svg" },
+			{ name: "PostgreSql", icon: "/tools/pgsql.svg" },
+			{ name: "Docker", icon: "/tools/dock.svg" },
+			{ name: "Sentry", icon: "/tools/sentry.svg" },
 		],
-		liveUrl: "/ui.yoom.com",
+		liveUrl: "https://toplinetrading.co/",
 	},
 	{
 		id: 3,
-		title: "AI Image SaaS - Canva Application",
+		title: "Let's Vote - Secure Voting Platform",
 		description:
-			"A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
+			"A Saas application that allows organizations and individuals to create competition and ensure a secure voting process.",
 		image: "/p3.png",
 		technologies: [
-			{ name: "React", icon: "/re.svg" },
-			{ name: "Tailwind", icon: "/tail.svg" },
-			{ name: "TypeScript", icon: "/ts.svg" },
-			{ name: "Three.js", icon: "/three.svg" },
-			{ name: "Cloudflare", icon: "/c.svg" },
+			{ name: "HTML", icon: "/tools/build/html.svg" },
+			{ name: "Tailwind", icon: "/tools/build/tail.svg" },
+			{ name: "JavaScript", icon: "/tools/build/js.svg" },
+			{ name: "Python", icon: "/tools/build/pyn.svg" },
+			{ name: "Django", icon: "/tools/build/dj.svg" },
 		],
 		liveUrl: "https://augustine1234.pythonanywhere.com/",
+		githubUrl: "https://github.com/010binary/Alx-Portfoilo-Project"
 	},
 ];
 
@@ -129,7 +133,7 @@ export const testimonials = [
 		name: "Nsikak Ekpo mMBA",
 		title: "Manager at ForeMedia Group UK Limited",
 		social: Linkedin,
-		profile: "/1716149761570.jpeg",
+		profile: "/testimonials/1716149761570.jpeg",
 	},
 	{
 		quote:
@@ -137,7 +141,7 @@ export const testimonials = [
 		name: "Aslam Dhikrullahi",
 		title: " Graphic designer / Co-Founder of Adtec Innovation Studios",
 		social: Linkedin,
-		profile: "/1690870466399.jpeg",
+		profile: "/testimonials/1690870466399.jpeg",
 	},
 	{
 		quote:
@@ -145,26 +149,32 @@ export const testimonials = [
 		name: "Ivivid",
 		title: "CEO of Topline Trading Limited",
 		social: Twitter,
-		profile: "/1234557454.svg",
+		profile: "/testimonials/1234557454.svg",
 	},
 ];
 
 export const socialMedia = [
 	{
 		id: 1,
-		img: "/git.svg",
+		img: "/socials/git.svg",
 		href: "https://github.com/010binary",
 	},
 	{
 		id: 2,
-		img: "/twit.svg",
+		img: "/socials/twit.svg",
 		href: "https://x.com/August13200296",
 	},
 	{
 		id: 3,
-		img: "/link.svg",
+		img: "/socials/link.svg",
 		href: "https://www.linkedin.com/in/alpha-augustine/",
 	},
+	{
+		id: 4,
+		img: "/socials/what.svg",
+		href: "https://wa.link/8fojb2",
+	},
+
 ];
 
 export const codeSnippets = {
@@ -272,17 +282,15 @@ export const technologies = [
 	{
 		category: "Frameworks",
 		items: [
-			"Django",
 			"ExpressJs",
-			"FastAPI",
 			"Apollo",
 			"NextJs",
-			"Flask",
+			"Django",
 		],
 	},
 	{
 		category: "Databases",
-		items: ["MySQL", "SQLite", "Redis", "PostgreSQL", "MongoDB", "SupaBase"],
+		items: ["MySQL", "SQLite", "Redis", "PostgreSQL", "MongoDB"],
 	},
 	{
 		category: "Testing",
@@ -317,7 +325,7 @@ export const technologies = [
 	},
 	{
 		category: "Other Tools",
-		items: ["Docker", "BASH", "Kafka", "RabbitMq", "Celery", "Github Actions"],
+		items: ["Docker", "BASH", "RabbitMq", "Celery", "Github Actions"],
 	},
 ];
 

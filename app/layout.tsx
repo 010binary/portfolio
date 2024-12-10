@@ -24,7 +24,7 @@ export default function RootLayout({
 	return (
 		<html lang="en" suppressHydrationWarning>
 			<head>
-				<link rel="icon" href="/jsm-logo.png" sizes="any" />
+				<link rel="icon" href="/favicon.png" sizes="any" />
 			</head>
 			<body
 				className={`${inter.className} relative bg-black-100 flex justify-center items-center flex-col overflow-x-hidden mx-auto sm:px-10 px-5`}
