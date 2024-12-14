@@ -30,6 +30,7 @@ export const POST = async (req: NextRequest) => {
         await transporter.sendMail(mailOptions);
         return NextResponse.json({}, { status: 203 })
     } catch (error) {
+        console.error(error)
         return NextResponse.json({
             error: error instanceof Error ? error.message : "An error occurred while sending the email"
         }, { status: 500 })
