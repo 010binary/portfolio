@@ -13,7 +13,6 @@ import {
 	Twitter,
 	Database,
 } from "lucide-react";
-import { project } from "@/public/index";
 
 export const navItems = [
 	{ name: "Home", link: "/" },
@@ -47,8 +46,8 @@ export const projectArr = [
 			{ name: "Tailwind CSS", icon: "/tools/build/tail.svg" },
 			{ name: "PostgreSQL", icon: "/tools/pgsql.svg" },
 		],
-		liveUrl: "https://buildbotgh.com",
-		githubUrl: "https://github.com/amartech/buildbot-gh",
+		liveUrl: "#",
+		githubUrl: "#",
 		featured: true,
 	},
 	{
@@ -63,8 +62,8 @@ export const projectArr = [
 			{ name: "Python", icon: "/tools/build/pyn.svg" },
 			{ name: "Django", icon: "/tools/build/dj.svg" },
 		],
-		liveUrl: "https://vheeworld.org",
-		githubUrl: "https://github.com/amartey-tricky/vhee",
+		liveUrl: "#",
+		githubUrl: "#",
 	},
 	{
 		title: "Mr Ampadu Portfolio",
@@ -78,8 +77,8 @@ export const projectArr = [
 			{ name: "Python", icon: "/tools/build/pyn.svg" },
 			{ name: "Django", icon: "/tools/build/dj.svg" },
 		],
-		liveUrl: "https://mrampadu.com",
-		githubUrl: "https://github.com/amartey-tricky/mr-ampadu",
+		liveUrl: "#",
+		githubUrl: "#",
 	},
 	{
 		title: "Dr Togobo Portfolio",
@@ -92,11 +91,10 @@ export const projectArr = [
 			{ name: "Python", icon: "/tools/build/pyn.svg" },
 			{ name: "Django", icon: "/tools/build/dj.svg" },
 		],
-		liveUrl: "https://ambrosetogobo.com",
-		githubUrl: "https://github.com/amartey-tricky/togobo",
+		liveUrl: "#",
+		githubUrl: "#",
 	},
 ];
-
 
 export const projects: Project[] = [
 	{
@@ -145,7 +143,7 @@ export const projects: Project[] = [
 			{ name: "Django", icon: "/tools/build/dj.svg" },
 		],
 		liveUrl: "https://augustine1234.pythonanywhere.com/",
-		githubUrl: "https://github.com/010binary/Alx-Portfoilo-Project"
+		githubUrl: "https://github.com/010binary/Alx-Portfoilo-Project",
 	},
 ];
 
@@ -197,7 +195,6 @@ export const socialMedia = [
 		img: "/socials/what.svg",
 		href: "https://wa.link/8fojb2",
 	},
-
 ];
 
 export const codeSnippets = {
@@ -304,12 +301,7 @@ export const technologies = [
 	},
 	{
 		category: "Frameworks",
-		items: [
-			"ExpressJs",
-			"Apollo",
-			"NextJs",
-			"Django",
-		],
+		items: ["ExpressJs", "Apollo", "NextJs", "Django"],
 	},
 	{
 		category: "Databases",

@@ -143,45 +143,45 @@ export function Projects() {
 										{project.title}
 									</h2>
 									<p className="text-gray-300 mb-4">{project.description}</p>
-										{/* Technologies and Live Link */}
-								<div className="flex items-center justify-between pt-4">
-									<div className="flex -space-x-2">
-										{project.technologies.map((tech, index) => (
-											<div
-												key={index}
-												className="w-8 h-8 rounded-full border border-white/10 bg-black/50 flex items-center justify-center backdrop-blur-sm"
-												title={tech.name}
+									{/* Technologies and Live Link */}
+									<div className="flex items-center justify-between pt-4">
+										<div className="flex -space-x-2">
+											{project.technologies.map((tech, index) => (
+												<div
+													key={index}
+													className="w-8 h-8 rounded-full border border-white/10 bg-black/50 flex items-center justify-center backdrop-blur-sm"
+													title={tech.name}
+												>
+													<Image
+														src={tech.icon}
+														alt={tech.name}
+														width={20}
+														height={20}
+														className="w-5 h-5 lg:w-7 lg:h-7 object-contain"
+													/>
+												</div>
+											))}
+										</div>
+										{project.githubUrl && (
+											<Link
+												href={project.githubUrl}
+												target="_blank"
+												className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
 											>
-												<Image
-													src={tech.icon}
-													alt={tech.name}
-													width={20}
-													height={20}
-													className="w-5 h-5 object-contain"
-												/>
-											</div>
-										))}
-									</div>
-									{project.githubUrl && (
-										<a
-											href={project.githubUrl}
+												<span className="lg:text-lg">Code</span>
+												<Github className="w-4 h-4 lg:w-6 lg:h-6" />
+											</Link>
+										)}
+
+										<Link
+											href={project.liveUrl}
 											target="_blank"
 											className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
 										>
-											<span>Code</span>
-											<Github className="w-4 h-4" />
-										</a>
-									)}
-
-									<a
-										href={project.liveUrl}
-										target="_blank"
-										className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
-									>
-										<span>Live</span>
-										<ExternalLink className="w-4 h-4" />
-									</a>
-								</div>
+											<span className="lg:text-lg">Live</span>
+											<ExternalLink className="w-4 h-4 lg:w-6 lg:h-6" />
+										</Link>
+									</div>
 								</div>
 							</motion.article>
 						))}
