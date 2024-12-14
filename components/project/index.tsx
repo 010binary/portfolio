@@ -114,7 +114,7 @@ export function Projects() {
 							<motion.article
 								key={index}
 								variants={itemVariants}
-								className={`bg-gray-800/50 backdrop-blur-sm rounded-lg overflow-hidden ${
+								className={`bg-gray-800/50 group backdrop-blur-sm rounded-2xl overflow-hidden p-6 ${
 									project.featured ? "md:col-span-2" : ""
 								}`}
 							>
@@ -124,7 +124,7 @@ export function Projects() {
 										height={400}
 										src={project.image}
 										alt={`Screenshot of ${project.title}`}
-										className="w-full h-64 object-cover"
+										className="w-full h-64 object-cover rounded-2xl transform group-hover:scale-105 transition-transform duration-300"
 									/>
 									{project.featured && (
 										<div className="absolute top-4 right-4 flex items-center gap-2 bg-purple-600 px-3 py-1 rounded-full">
@@ -138,7 +138,7 @@ export function Projects() {
 										</div>
 									)}
 								</figure>
-								<div className="p-6">
+								<div className="py-6">
 									<h2 className="text-xl font-bold text-white mb-2">
 										{project.title}
 									</h2>
