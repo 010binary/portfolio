@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Github, Star } from "lucide-react";
 import Image from "next/image";
@@ -30,17 +30,24 @@ const itemVariants = {
 export function Projects() {
 	const [filter, setFilter] = useState("all");
 
-	const filterTags = Array.from(
-		new Set(projectArr.flatMap((project) => project.tags)),
-	);
+	const filterTags = useMemo(() => {
+		const tags = new Set<string>();
+		projectArr.forEach((project) => {
+			project.technologies.forEach((tech) => tags.add(tech.name));
+		});
+		return Array.from(tags);
+	}, []);
 
-	const filteredProjects =
-		filter === "all"
+	const filteredProjects = useMemo(() => {
+		return filter === "all"
 			? projectArr
-			: projectArr.filter((project) => project.tags.includes(filter));
+			: projectArr.filter((project) =>
+					project.technologies.some((tech) => tech.name === filter),
+				);
+	}, [filter]);
 
 	return (
-		<main className="min-h-screen ">
+		<main className="min-h-screen">
 			<div className="relative container mx-auto px-4 py-28">
 				<motion.div
 					variants={containerVariants}
@@ -54,7 +61,7 @@ export function Projects() {
 						className="text-center max-w-3xl mx-auto"
 					>
 						<h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-							My <span className="text-purple">Projects </span>
+							My <span className="text-purple">Projects</span>
 						</h1>
 						<p className="text-lg text-gray-300">
 							A collection of my recent work, side projects, and open-source
@@ -136,41 +143,45 @@ export function Projects() {
 										{project.title}
 									</h2>
 									<p className="text-gray-300 mb-4">{project.description}</p>
-									<ul
-										className="flex flex-wrap gap-2 mb-6"
-										aria-label="Technologies used"
-									>
-										{project.tags.map((tag, tagIndex) => (
-											<li
-												key={tagIndex}
-												className="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm"
+										{/* Technologies and Live Link */}
+								<div className="flex items-center justify-between pt-4">
+									<div className="flex -space-x-2">
+										{project.technologies.map((tech, index) => (
+											<div
+												key={index}
+												className="w-8 h-8 rounded-full border border-white/10 bg-black/50 flex items-center justify-center backdrop-blur-sm"
+												title={tech.name}
 											>
-												{tag}
-											</li>
+												<Image
+													src={tech.icon}
+													alt={tech.name}
+													width={20}
+													height={20}
+													className="w-5 h-5 object-contain"
+												/>
+											</div>
 										))}
-									</ul>
-									<footer className="flex gap-4">
-										<Link
-											href={project.liveUrl}
-											target="_blank"
-											rel="noopener noreferrer"
-											className="flex items-center gap-2 text-purple-400 hover:text-purple-300"
-											aria-label={`View live demo of ${project.title}`}
-										>
-											<ExternalLink className="w-4 h-4" aria-hidden="true" />
-											<span>Live Demo</span>
-										</Link>
-										<Link
+									</div>
+									{project.githubUrl && (
+										<a
 											href={project.githubUrl}
 											target="_blank"
-											rel="noopener noreferrer"
-											className="flex items-center gap-2 text-purple-400 hover:text-purple-300"
-											aria-label={`View source code for ${project.title}`}
+											className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
 										>
-											<Github className="w-4 h-4" aria-hidden="true" />
-											<span>Source Code</span>
-										</Link>
-									</footer>
+											<span>Code</span>
+											<Github className="w-4 h-4" />
+										</a>
+									)}
+
+									<a
+										href={project.liveUrl}
+										target="_blank"
+										className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
+									>
+										<span>Live</span>
+										<ExternalLink className="w-4 h-4" />
+									</a>
+								</div>
 								</div>
 							</motion.article>
 						))}

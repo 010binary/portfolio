@@ -40,8 +40,13 @@ export const projectArr = [
 		title: "BuildBot GH",
 		description:
 			"A web app for buildbot GH to allow users refer prospective customers for a commission.",
-		image: project,
-		tags: ["Nextjs", "TypeScript", "Tailwind CSS", "PostgreSQL"],
+		image: "/project.png",
+		technologies: [
+			{ name: "Next.js", icon: "/tools/build/next.svg" },
+			{ name: "TypeScript", icon: "/tools/build/ts.svg" },
+			{ name: "Tailwind CSS", icon: "/tools/build/tail.svg" },
+			{ name: "PostgreSQL", icon: "/tools/pgsql.svg" },
+		],
 		liveUrl: "https://buildbotgh.com",
 		githubUrl: "https://github.com/amartech/buildbot-gh",
 		featured: true,
@@ -50,30 +55,48 @@ export const projectArr = [
 		title: "VheeWorld Foundation",
 		description:
 			"A website for VheeWorld Foundation to spread their outreach and also accept donations from potential donors.",
-		image: project,
-		tags: ["Nextjs", "TypeScript", "Tailwind CSS"],
+		image: "/project.png",
+		technologies: [
+			{ name: "HTML", icon: "/tools/build/html.svg" },
+			{ name: "Tailwind", icon: "/tools/build/tail.svg" },
+			{ name: "JavaScript", icon: "/tools/build/js.svg" },
+			{ name: "Python", icon: "/tools/build/pyn.svg" },
+			{ name: "Django", icon: "/tools/build/dj.svg" },
+		],
 		liveUrl: "https://vheeworld.org",
 		githubUrl: "https://github.com/amartey-tricky/vhee",
-		featured: true,
 	},
 	{
 		title: "Mr Ampadu Portfolio",
 		description:
 			"A porfolio website for Mr. Ampadu, an administrotor of a small business.",
-		image: project,
-		tags: ["Astro", "TypeScript", "Tailwind CSS", "Vercel"],
+		image: "/project.png",
+		technologies: [
+			{ name: "HTML", icon: "/tools/build/html.svg" },
+			{ name: "Tailwind", icon: "/tools/build/tail.svg" },
+			{ name: "JavaScript", icon: "/tools/build/js.svg" },
+			{ name: "Python", icon: "/tools/build/pyn.svg" },
+			{ name: "Django", icon: "/tools/build/dj.svg" },
+		],
 		liveUrl: "https://mrampadu.com",
 		githubUrl: "https://github.com/amartey-tricky/mr-ampadu",
 	},
 	{
 		title: "Dr Togobo Portfolio",
 		description: "A porfolio website for Dr. Togobo, a medical doctor.",
-		image: project,
-		tags: ["Nextjs", "TypeScript", "Tailwind CSS", "Vercel"],
+		image: "/project.png",
+		technologies: [
+			{ name: "HTML", icon: "/tools/build/html.svg" },
+			{ name: "Tailwind", icon: "/tools/build/tail.svg" },
+			{ name: "JavaScript", icon: "/tools/build/js.svg" },
+			{ name: "Python", icon: "/tools/build/pyn.svg" },
+			{ name: "Django", icon: "/tools/build/dj.svg" },
+		],
 		liveUrl: "https://ambrosetogobo.com",
 		githubUrl: "https://github.com/amartey-tricky/togobo",
 	},
 ];
+
 
 export const projects: Project[] = [
 	{
@@ -84,11 +107,11 @@ export const projects: Project[] = [
 		image: "/tt.png",
 		technologies: [
 			{ name: "Next.js", icon: "/tools/build/next.svg" },
+			{ name: "HTML", icon: "/tools/build/html.svg" },
 			{ name: "Tailwind", icon: "/tools/build/tail.svg" },
-			{ name: "TypeScript", icon: "/tools/build/ts.svg" },
-			{ name: "PostgreSql", icon: "/tools/pgsql.svg" },
-			{ name: "Docker", icon: "/tools/dock.svg" },
-			{ name: "Sentry", icon: "/tools/sentry.svg" },
+			{ name: "JavaScript", icon: "/tools/build/js.svg" },
+			{ name: "Python", icon: "/tools/build/pyn.svg" },
+			{ name: "Django", icon: "/tools/build/dj.svg" },
 		],
 		liveUrl: "https://toplinetrading.co/",
 	},

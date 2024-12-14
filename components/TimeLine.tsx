@@ -52,7 +52,9 @@ const TimeLine = () => {
 							<p className="text-gray-300 mt-2">{experience.company}</p>
 							<time className="text-gray-300 ">{experience.date}</time>
 							<p className="text-gray-300 ">{experience.location}</p>
-							<p className="text-gray-300 mt-3 text-justify">{experience.description}</p>
+							<p className="text-gray-300 mt-3 text-justify">
+								{experience.description}
+							</p>
 						</article>
 					</motion.li>
 				))}
