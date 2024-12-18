@@ -36,85 +36,87 @@ export interface Project {
 
 export const projectArr = [
 	{
-		title: "BuildBot GH",
-		description:
-			"A web app for buildbot GH to allow users refer prospective customers for a commission.",
-		image: "/project.png",
-		technologies: [
-			{ name: "Next.js", icon: "/tools/build/next.svg" },
-			{ name: "TypeScript", icon: "/tools/build/ts.svg" },
-			{ name: "Tailwind CSS", icon: "/tools/build/tail.svg" },
-			{ name: "PostgreSQL", icon: "/tools/pgsql.svg" },
-		],
-		liveUrl: "#",
-		githubUrl: "#",
-		featured: true,
-	},
-	{
-		title: "VheeWorld Foundation",
-		description:
-			"A website for VheeWorld Foundation to spread their outreach and also accept donations from potential donors.",
-		image: "/project.png",
-		technologies: [
-			{ name: "HTML", icon: "/tools/build/html.svg" },
-			{ name: "Tailwind", icon: "/tools/build/tail.svg" },
-			{ name: "JavaScript", icon: "/tools/build/js.svg" },
-			{ name: "Python", icon: "/tools/build/pyn.svg" },
-			{ name: "Django", icon: "/tools/build/dj.svg" },
-		],
-		liveUrl: "#",
-		githubUrl: "#",
-	},
-	{
-		title: "Mr Ampadu Portfolio",
-		description:
-			"A porfolio website for Mr. Ampadu, an administrotor of a small business.",
-		image: "/project.png",
-		technologies: [
-			{ name: "HTML", icon: "/tools/build/html.svg" },
-			{ name: "Tailwind", icon: "/tools/build/tail.svg" },
-			{ name: "JavaScript", icon: "/tools/build/js.svg" },
-			{ name: "Python", icon: "/tools/build/pyn.svg" },
-			{ name: "Django", icon: "/tools/build/dj.svg" },
-		],
-		liveUrl: "#",
-		githubUrl: "#",
-	},
-	{
-		title: "Dr Togobo Portfolio",
-		description: "A porfolio website for Dr. Togobo, a medical doctor.",
-		image: "/project.png",
-		technologies: [
-			{ name: "HTML", icon: "/tools/build/html.svg" },
-			{ name: "Tailwind", icon: "/tools/build/tail.svg" },
-			{ name: "JavaScript", icon: "/tools/build/js.svg" },
-			{ name: "Python", icon: "/tools/build/pyn.svg" },
-			{ name: "Django", icon: "/tools/build/dj.svg" },
-		],
-		liveUrl: "#",
-		githubUrl: "#",
-	},
-];
-
-export const projects: Project[] = [
-	{
-		id: 1,
 		title: "Topline Trading",
 		description:
 			"Topline Trading is a leading provider of funds and equity for talented traders to expand their trading portfolios.",
 		image: "/tt.png",
 		technologies: [
 			{ name: "Next.js", icon: "/tools/build/next.svg" },
+			{ name: "Tailwind", icon: "/tools/build/tail.svg" },
+			{ name: "TypeScript", icon: "/tools/build/ts.svg" },
+			{ name: "PostgreSql", icon: "/tools/pgsql.svg" },
+			{ name: "Docker", icon: "/tools/dock.svg" },
+			{ name: "Sentry", icon: "/tools/sentry.svg" },
+		],
+		liveUrl: "https://toplinetrading.co/",
+		featured: true,
+	},
+	{
+		title: "Let's Vote - Secure Voting",
+		description:
+			"A Saas application that allows organizations and individuals to create competition and ensure a secure voting process.",
+		image: "/p3.png",
+		technologies: [
 			{ name: "HTML", icon: "/tools/build/html.svg" },
 			{ name: "Tailwind", icon: "/tools/build/tail.svg" },
 			{ name: "JavaScript", icon: "/tools/build/js.svg" },
 			{ name: "Python", icon: "/tools/build/pyn.svg" },
 			{ name: "Django", icon: "/tools/build/dj.svg" },
 		],
-		liveUrl: "https://toplinetrading.co/",
+		liveUrl: "https://augustine1234.pythonanywhere.com/",
+		githubUrl: "https://github.com/010binary/Alx-Portfoilo-Project",
+		featured: true,
 	},
 	{
-		id: 2,
+		title: "Let's Vote - Secure Voting",
+		description:
+			"A Saas application that allows organizations and individuals to create competition and ensure a secure voting process.",
+		image: "/p3.png",
+		technologies: [
+			{ name: "HTML", icon: "/tools/build/html.svg" },
+			{ name: "Tailwind", icon: "/tools/build/tail.svg" },
+			{ name: "JavaScript", icon: "/tools/build/js.svg" },
+			{ name: "Python", icon: "/tools/build/pyn.svg" },
+			{ name: "Django", icon: "/tools/build/dj.svg" },
+		],
+		liveUrl: "https://augustine1234.pythonanywhere.com/",
+		githubUrl: "https://github.com/010binary/Alx-Portfoilo-Project",
+	},
+	{
+		title: "Let's Vote - Secure Voting",
+		description:
+			"A Saas application that allows organizations and individuals to create competition and ensure a secure voting process.",
+		image: "/p3.png",
+		technologies: [
+			{ name: "HTML", icon: "/tools/build/html.svg" },
+			{ name: "Tailwind", icon: "/tools/build/tail.svg" },
+			{ name: "JavaScript", icon: "/tools/build/js.svg" },
+			{ name: "Python", icon: "/tools/build/pyn.svg" },
+			{ name: "Django", icon: "/tools/build/dj.svg" },
+		],
+		liveUrl: "https://augustine1234.pythonanywhere.com/",
+		githubUrl: "https://github.com/010binary/Alx-Portfoilo-Project",
+	},
+	{
+		title: "Let's Vote - Secure Voting",
+		description:
+			"A Saas application that allows organizations and individuals to create competition and ensure a secure voting process.",
+		image: "/p3.png",
+		technologies: [
+			{ name: "HTML", icon: "/tools/build/html.svg" },
+			{ name: "Tailwind", icon: "/tools/build/tail.svg" },
+			{ name: "JavaScript", icon: "/tools/build/js.svg" },
+			{ name: "Python", icon: "/tools/build/pyn.svg" },
+			{ name: "Django", icon: "/tools/build/dj.svg" },
+		],
+		liveUrl: "https://augustine1234.pythonanywhere.com/",
+		githubUrl: "https://github.com/010binary/Alx-Portfoilo-Project",
+	},
+];
+
+export const projects: Project[] = [
+	{
+		id: 1,
 		title: "Topline Trading",
 		description:
 			"Topline Trading is a leading provider of funds and equity for talented traders to expand their trading portfolios.",
@@ -130,8 +132,8 @@ export const projects: Project[] = [
 		liveUrl: "https://toplinetrading.co/",
 	},
 	{
-		id: 3,
-		title: "Let's Vote - Secure Voting Platform",
+		id: 2,
+		title: "Let's Vote - Secure Voting",
 		description:
 			"A Saas application that allows organizations and individuals to create competition and ensure a secure voting process.",
 		image: "/p3.png",
@@ -145,6 +147,23 @@ export const projects: Project[] = [
 		liveUrl: "https://augustine1234.pythonanywhere.com/",
 		githubUrl: "https://github.com/010binary/Alx-Portfoilo-Project",
 	},
+	{
+		id: 3,
+		title: "Topline Trading",
+		description:
+			"Topline Trading is a leading provider of funds and equity for talented traders to expand their trading portfolios.",
+		image: "/tt.png",
+		technologies: [
+			{ name: "Next.js", icon: "/tools/build/next.svg" },
+			{ name: "HTML", icon: "/tools/build/html.svg" },
+			{ name: "Tailwind", icon: "/tools/build/tail.svg" },
+			{ name: "JavaScript", icon: "/tools/build/js.svg" },
+			{ name: "Python", icon: "/tools/build/pyn.svg" },
+			{ name: "Django", icon: "/tools/build/dj.svg" },
+		],
+		liveUrl: "https://toplinetrading.co/",
+	},
+
 ];
 
 export const testimonials = [
@@ -201,11 +220,12 @@ export const codeSnippets = {
 	js: `
 function Developer() {
   return (
-    skills: ["React", "Next.js", "TailwindCSS", "TypeScript", 
-              "HTML", "CSS", "JavaScript", "DrizzleORM", "SQL",
-              "PostGres"
+    skills: [ "TypeScript", "NodeJs", "ExpressJs",
+              "MySql", "MongoDb", "PostgreSql",
+              "Redis", "GraphQL", "Docker",
+			  "RabbitMq", "Jest", "Mocha", "Chai"
             ],
-    passion: "Building beautiful UIs and websites",
+    passion: "Building reliable server-side applications",
   )
 }
 console.log(Developer())
@@ -217,12 +237,12 @@ from typing import Union
 
 def Developer() -> Union[dict, str]:
     return {
-        "skills": ["React", "Next.js", "TailwindCSS",
-                   "TypeScript", "HTML", "CSS", 
-                   "JavaScript", "DrizzleORM", "SQL", 
-                   "PostGres"
+        "skills": [ "Django", "Flask", "FastAPI", 
+				    "MySql", "PostgreSQL", "MongoDB",
+				    "Redis", "GraphQL", "Docker",
+				    "RabbitMq", "Celery", "Pytest"
                   ],
-        "passion": "Building beautiful UIs and websites",
+        "passion": "Building reliable server-side applications",
     }
 
 

@@ -40,7 +40,7 @@ export function About() {
 					{/* Hero Section */}
 					<motion.header
 						variants={itemVariants}
-						className="text-center max-w-3xl mx-auto"
+						className="text-center max-w-5xl mx-auto"
 					>
 						<h1 id="About-heading" className="heading mb-8 text-center">
 							About <span className="text-purple">Me</span>
@@ -51,11 +51,22 @@ export function About() {
 							efficient and scalable
 							<span className="text-purple">
 								{" "}
-								backend systems. Based in Lagos, Nigeria,{" "}
+								Server-side Application with a strong focus on data processing
+								and real-time communication technologies.{" "}
 							</span>
-							I&apos;m open to relocation and eager to embrace new challenges.
-							With a strong enthusiasm for learning new technologies, I
-							continually strive to improve and deliver impactful solutions.
+							I&apos;m particularly drawn to solving challenges in critical
+							sectors like
+							<span className="text-purple">
+								{" "}
+								education, healthcare, transportation, and financial technology.{" "}
+							</span>
+							My approach combines technical excellence with a continuous
+							learning mindset, always seeking to develop solutions that can
+							make a tangible impact.
+							<span className="text-purple"> Currently based in Lagos, </span>
+							Nigeria, I&apos;m open to relocation and excited to tackle
+							innovative projects that push the boundaries of backend
+							engineering.
 						</p>
 					</motion.header>
 
@@ -72,7 +83,7 @@ export function About() {
 							aria-selected={activeTab === "skills"}
 							aria-controls="skills-panel"
 							onClick={() => setActiveTab("skills")}
-							className="relative inline-flex h-12 w-full md:w-60 md:mt-10 overflow-hidden rounded-lg p-[1px] focus:outline-none"
+							className="relative inline-flex h-12 w-full md:w-60  overflow-hidden rounded-lg p-[1px] focus:outline-none"
 						>
 							<span className="absolute inset-[-1000%] animate-[spin_7s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
 							<span
@@ -92,7 +103,7 @@ export function About() {
 							aria-selected={activeTab === "technologies"}
 							aria-controls="technologies-panel"
 							onClick={() => setActiveTab("technologies")}
-							className="relative inline-flex h-12 w-full md:w-60 md:mt-10 overflow-hidden rounded-lg p-[1px] focus:outline-none"
+							className="relative inline-flex h-12 w-full md:w-60 overflow-hidden rounded-lg p-[1px] focus:outline-none"
 						>
 							<span className="absolute inset-[-1000%] animate-[spin_7s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
 							<span
