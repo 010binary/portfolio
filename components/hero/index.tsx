@@ -86,7 +86,7 @@ export function HeroContent() {
               className="flex items-center gap-4"
             >
               <Link
-                href="https://drive.google.com/file/d/1DvYCeGoPZO-WX1xRZE5fu8KBwOiCBVt5/view?usp=sharing"
+                href="https://drive.google.com/file/d/1kUMhn65dD3NWAzMnfJnxWX0KtykOTvAd/view?usp=sharing"
                 target="_blank"
               >
                 <MagicButton
