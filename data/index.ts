@@ -220,12 +220,12 @@ export const codeSnippets = {
 	js: `
 function Developer() {
   return (
-    skills: [ "TypeScript", "NodeJs", "ExpressJs",
-              "MySql", "MongoDb", "PostgreSql",
-              "Redis", "GraphQL", "Docker",
-			  "RabbitMq", "Jest", "Mocha", "Chai"
+    skills: [ "TypeScript", "NestJs", "ExpressJs",
+              "NextJs", "MongoDb", "PostgreSql",
+              "React", "GraphQL", "Docker",
+			  "Jest", "Mocha", "Chai"
             ],
-    passion: "Building reliable server-side applications",
+    passion: "Building reliable applications",
   )
 }
 console.log(Developer())
@@ -242,32 +242,31 @@ def Developer() -> Union[dict, str]:
 				    "Redis", "GraphQL", "Docker",
 				    "RabbitMq", "Celery", "Pytest"
                   ],
-        "passion": "Building reliable server-side applications",
+        "passion": "Building reliable applications",
     }
 
 
 print(Developer())
 `.trim(),
 
-	// this is the Java part
-	// 	java: `
-	// import java.util.Arrays;
+	java: `
+import java.util.Arrays;
 
-	// public class Main {
-	//     public static void main(String[] args) {
-	//         String[] skills = {
-	//                             "React", "Next.js", "TailwindCSS",
-	//                             "TypeScript", "HTML", "CSS",
-	//                             "JavaScript", "DrizzleORM", "SQL",
-	//                             "PostGres"
-	//                           };
+public class Main {
+	public static void main(String[] args) {
 
-	//         String passion = "Building beautiful UIs and websites";
-	//         System.out.println("Skills: " + Arrays.toString(skills));
-	//         System.out.println("Passion: " + passion);
-	//     }
-	// }
-	// `.trim(),
+	    String[] skills = {
+	        "Spring", "Springboot", "Spring cloud",
+			"Hibernate", "JDBC", "Spring Boot Actuator",
+	        "DrizzleORM", "SQL", "PostGres"
+	        };
+	    String passion = "Building reliable applications";
+
+		System.out.println(Arrays.toString(skills));
+	    System.out.println("Passion: " + passion)
+	}
+}
+	 `.trim(),
 };
 
 export const skills = [
@@ -390,33 +389,33 @@ export const contactMethods = [
 
 export const experiences = [
 	{
-		title: "Backend Developer (Contract)",
+		title: "Software Engineer (Contract)",
 		company: "Fuziondot",
-		date: "Sep 2024 – Nov 2024",
+		date: "Oct 2024 – Dec 2024",
 		location: "Remote, UK",
 		description:
 			"Designed and developed a real-time data gathering system using Puppeteer, Node.js, and Socket.io, enabling seamless scraping and delivery of validated data. Optimized performance with MongoDB Clusters and containerized backend services using Docker, and integrated an AI-powered chat system leveraging ChatGPT to improve user engagement.",
 	},
 	{
-		title: "Backend Developer",
+		title: "Software Engineer",
 		company: "ForeMedia Group UK Limited",
-		date: "May 2024 – Oct 2024",
+		date: "Apr 2024 – Oct 2024",
 		location: "Lagos, Nigeria",
 		description:
 			"Collaborated with a cross-functional team to build a streaming service for African entertainment, developing RESTful APIs with Node.js and Express and integrating Supabase for data management. Implemented video processing pipelines using Python and Django-ninja, and optimized front-end performance with Next.js using SSR and SSG. Established automated testing and CI/CD pipelines to ensure code quality and efficient deployments.",
 	},
 	{
-		title: "Backend Developer",
+		title: "Software Engineer",
 		company: "Asque Africa",
-		date: "Sep 2023 – Aug 2024",
+		date: "Aug 2023 – Aug 2024",
 		location: "Lagos, Nigeria",
 		description:
 			"Developed a community-driven digital publishing and marketplace platform, connecting African creatives globally. Used NestJS and Node.js with MongoDB for the backend and React.js with Redux for a responsive front-end experience. Implemented a scalable microservices architecture using Docker, enabling efficient deployment and scaling of features like listing and selling African-themed literature and artwork.",
 	},
 	{
-		title: "Backend Developer",
+		title: "Software Engineer",
 		company: "Adtec Innovation Studios",
-		date: "Aug 2023 – Mar 2024",
+		date: "Sept 2022 – May 2023",
 		location: "Lagos, Nigeria",
 		description:
 			"Led the development of an internal tool to automate critical business processes, including order management, invoicing, and inventory tracking. Built the backend using Django and MySQL, leveraging Django ORM for efficient database operations. Designed modular RESTful APIs with Django REST Framework and implemented unit and integration tests, achieving a 40% improvement in operational efficiency. Set up CI/CD pipelines with GitHub Actions for streamlined deployment.",
