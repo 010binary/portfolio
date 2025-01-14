@@ -271,9 +271,9 @@ public class Main {
 
 export const skills = [
 	{
-		name: "Backend Development",
+		name: "Application Development",
 		icon: Code2,
-		description: "Building scalable and reliable server-side applications",
+		description: "Writing, Testing and Debugging of application code.",
 	},
 	{
 		name: "Database Management",
@@ -316,11 +316,11 @@ export const skills = [
 export const technologies = [
 	{
 		category: "Languages",
-		items: ["JavaScript", "TypeScript", "Python"],
+		items: ["JavaScript", "TypeScript", "Python", "Java"],
 	},
 	{
 		category: "Frameworks",
-		items: ["ExpressJs", "Apollo", "NextJs", "Django"],
+		items: ["React", "NextJs", "ExpressJs", "Apollo", "NestJs", "Spring Framework"],
 	},
 	{
 		category: "Databases",
@@ -355,11 +355,11 @@ export const technologies = [
 	},
 	{
 		category: "Application monitoring",
-		items: ["Datadog", "Sentry", "Prometheus"],
+		items: ["Grafana", "Prometheus", "Sentry"],
 	},
 	{
 		category: "Other Tools",
-		items: ["Docker", "BASH", "RabbitMq", "Celery", "Github Actions"],
+		items: ["Docker", "BASH", "RabbitMq", "Github Actions"],
 	},
 ];
 
